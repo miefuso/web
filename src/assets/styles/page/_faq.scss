@@ -1,0 +1,15 @@
+@use "../foundation/variables" as *;
+
+.p-faq {
+  &-list {
+    margin-top: 48px;
+
+    + .c-subtitle {
+      margin-top: 128px;
+    }
+  }
+}
+
+.c-subtitle {
+  margin-top: 64px;
+}

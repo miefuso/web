@@ -1,0 +1,20 @@
+---
+interface Props {
+  title: string;
+  subtitle: string;
+}
+
+const { title, subtitle } = Astro.props;
+---
+
+<div class="c-subtitle">
+  <div class="c-subtitle__box">
+    <h2>{title}</h2>
+    <div class="c-subtitle__border"></div>
+    <p>
+      {subtitle.split('').map((char, i) => (
+        <span class="c-subtitle__char" style={`animation-delay: ${i * 0.03}s`}>{char}</span>
+      ))}
+    </p>
+  </div>
+</div>

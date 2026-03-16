@@ -1,0 +1,58 @@
+---
+const pathname = Astro.url.pathname;
+
+const navItems = [
+  { href: '/',          label: 'トップ' },
+  { href: '/features/', label: '特徴' },
+  { href: '/projects/', label: '導入実績' },
+  { href: '/purchase/', label: '買取' },
+  { href: '/company/',  label: '会社概要' },
+  { href: '/faq/',      label: 'よくある質問' },
+  { href: '/contact/',  label: 'お問い合わせ' },
+];
+---
+
+<header class="l-header">
+  <div class="l-header__inner container">
+    <div class="l-header__logo">
+      <a href="/"><img src="/logo.svg" alt="株式会社ミエフソー" /></a>
+    </div>
+    <nav class="l-header__nav">
+      <ul class="l-header__nav-list">
+        {navItems.map(({ href, label }) => (
+          <li>
+            <a href={href} class={pathname === href ? 'is-active' : ''}>
+              {label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+    <button class="l-header__hamburger" aria-label="メニューを開く" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<script>
+  const hamburger = document.querySelector<HTMLButtonElement>('.l-header__hamburger');
+  const header = document.querySelector<HTMLElement>('.l-header');
+  const navLinks = document.querySelectorAll<HTMLAnchorElement>('.l-header__nav-list a');
+
+  hamburger?.addEventListener('click', () => {
+    const isOpen = header?.classList.toggle('is-open');
+    hamburger.setAttribute('aria-expanded', String(isOpen));
+    hamburger.setAttribute('aria-label', isOpen ? 'メニューを閉じる' : 'メニューを開く');
+  });
+
+  // ナビリンククリックでメニューを閉じる
+  navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      header?.classList.remove('is-open');
+      hamburger?.setAttribute('aria-expanded', 'false');
+      hamburger?.setAttribute('aria-label', 'メニューを開く');
+    });
+  });
+</script>

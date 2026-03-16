@@ -1,0 +1,77 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PageHeader from "@/components/common/PageHeader.astro";
+import TopBtn from "@/components/common/TopBtn.astro";
+import { Image } from 'astro:assets';
+import company01Img from '@/assets/images/feat_warehouse_01.jpg';
+---
+
+<BaseLayout title="会社概要 | 株式会社ミエフソー">
+  <PageHeader
+    title="会社概要"
+    subtitle="Company"
+    bgImage="/assets/images/header_company.jpg"
+  />
+
+  <section class="container">
+    <div class="p-company-info">
+      <Image src={company01Img} alt="株式会社ミエフソー外観"/>
+      <div>
+        <h2>株式会社 ミエフソー</h2>
+        <table class="p-company-info__info-table">
+          <tr>
+            <th>代表</th>
+            <td>桑原　武郎</td>
+          </tr>
+          <tr>
+            <th>所在地</th>
+            <td>
+              〒515-0041<br>
+              三重県松阪市上川町2500-15
+            </td>
+          </tr>
+          <tr>
+            <th>TEL</th>
+            <td>0598-28-4970</td>
+          </tr>
+          <tr>
+            <th>FAX</th>
+            <td>0598-28-4949</td>
+          </tr>
+          <tr>
+            <th>設立</th>
+            <td>19xx年xx月</td>
+          </tr>
+          <tr>
+            <th>資本金</th>
+            <td>xxxx万円</td>
+          </tr>
+          <tr>
+            <th>事業内容</th>
+            <td>
+              製材一次加工機械の製造、販売
+            </td>
+          </tr>
+          <tr>
+            <th>代理店</th>
+            <td>
+              オーアイ・イノベーション（株）<br>
+              富士鋼業株式会社<br>
+              横山鐵工株式会社<br>
+              株式会社新柴設備<br>
+              天竜製鋸株式会社
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-company-map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.8798101168422!2d136.56059867604097!3d34.5565983909309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60046a784a75ecf5%3A0x158311d235572a31!2z77yI5qCq77yJ44Of44Ko44OV44K944O8!5e0!3m2!1sja!2sjp!4v1773020097347!5m2!1sja!2sjp" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+    title="株式会社ミエフソー アクセスマップ"></iframe>
+  </section>
+
+  <TopBtn href="#" />
+
+</BaseLayout>

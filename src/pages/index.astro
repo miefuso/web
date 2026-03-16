@@ -1,0 +1,173 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SectionTitle from "@/components/common/SectionTitle.astro";
+import { Image } from 'astro:assets';
+import '@splidejs/splide/css';
+import reconImg from '@/assets/images/top_recon.jpg';
+import feature01Img from '@/assets/images/top_feature_01.jpg';
+import feature02Img from '@/assets/images/top_feature_02.jpg';
+import feature03Img from '@/assets/images/top_feature_03.jpg';
+---
+
+<BaseLayout title="トップ | 株式会社ミエフソー">
+
+  <!-- first-view -->
+  <section class="p-top-fv">
+    <div class="p-top-fv__bg-box">
+      <div class="p-top-fv__bg-left"></div>
+      <div class="splide p-top-fv__slider" aria-label="ファーストビュー スライドショー">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <div class="p-top-fv__slide-bg" style="background-image: url('/assets/images/fv_slide_01.jpg');"></div>
+            </li>
+            <li class="splide__slide">
+              <div class="p-top-fv__slide-bg" style="background-image: url('/assets/images/fv_slide_02.jpg');"></div>
+            </li>
+            <li class="splide__slide">
+              <div class="p-top-fv__slide-bg" style="background-image: url('/assets/images/fv_slide_03.jpg');"></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="p-top-fv__text-area">
+      <div class="container">
+        <h1>生産を支える、<br>確かな再生技術</h1>
+        <p>
+          私たちは、長年培った技術で製材機械を一台一台丁寧に再生し、新製品水準の品質でお客様の生産性と安定稼働を支えています。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 製材機械の再生販売 -->
+  <section class="p-top-recon">
+    <div class="container">
+      <SectionTitle title="製材機械の再生販売" subtitle="Reconditioned Used Machinery" />
+      <div class="single-imgae p-top-recon__body">
+        <div class="p-top-recon__image">
+          <Image src={reconImg} alt="整備再生したキングチッパー"/>
+        </div>
+        <p>
+          ミエフソーでは製材機械の再生販売を行っております。完全オーバーホールを実施し、新製品と同様の品質で製材機械の販売、導入支援を行っております。導入後のアフターメンテナンスも対応いたします。新規工場への設置や、既存工場の拡張時の設備、レイアウトのご提案もさせて頂いております。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ミエフソーの特徴 -->
+  <section class="p-top-feature">
+    <SectionTitle title="ミエフソーの特徴" subtitle="Key Features of MIE FUSO" />
+    <div class="p-top-feature__inner">
+      <ul class="p-top-feature__list container">
+        <li class="p-top-feature__item">
+          <div class="p-top-feature__image">
+            <a href="/features#technical">
+              <Image src={feature01Img} alt="多くの分野に富んだ技術力" />
+            </a>
+          </div>
+          <h3>多くの分野に富んだ技術力</h3>
+          <p>
+            数多くの実績の中で培ってきた知識と経験を活かし、一台一台の状態を見極めながら、最適な再生と改良を行っています。
+          </p>
+          <div class="text-right">
+            <a href="/features#technical" class="c-btn c-btn--w">更に詳しく</a>
+          </div>
+        </li>
+        <li class="p-top-feature__item">
+          <div class="p-top-feature__image">
+            <a href="/features#proposal">
+              <Image src={feature02Img} alt="様々なニーズへの提案力" />
+            </a>
+          </div>
+          <h3>様々なニーズへの提案力</h3>
+          <p>
+            機械の改造や仕様変更にも柔軟に対応し、豊富な知識と経験をもとに、お客様のご要望に対する最適な解決策をご提案いたします。
+          </p>
+          <div class="text-right">
+            <a href="/features#proposal" class="c-btn c-btn--w">更に詳しく</a>
+          </div>
+        </li>
+        <li class="p-top-feature__item">
+          <div class="p-top-feature__image">
+            <a href="/features#stock">
+              <Image src={feature03Img} alt="自社近接地区の作業力" />
+            </a>
+          </div>
+          <h3>自社倉庫保有の在庫力</h3>
+          <p>
+            自社倉庫に豊富な在庫を保有し、ご要望機種への迅速な対応はもちろん、修理や故障時の部品調達にも柔軟に対応できる体制を整えています。
+          </p>
+          <div class="text-right">
+            <a href="/features#stock" class="c-btn c-btn--w">更に詳しく</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- アクセス・問い合わせ -->
+  <section class="p-top-access">
+    <div class="p-top-access__inner container">
+      <div class="p-top-access__map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.8798101168422!2d136.56059867604097!3d34.5565983909309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60046a784a75ecf5%3A0x158311d235572a31!2z77yI5qCq77yJ44Of44Ko44OV44K944O8!5e0!3m2!1sja!2sjp!4v1773020097347!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="株式会社ミエフソー アクセスマップ"></iframe>
+      </div>
+      <div class="p-top-access__info">
+        <h2 class="p-top-access__name">株式会社 ミエフソー</h2>
+        <dl class="p-top-access__detail">
+          <dt>所在地</dt>
+          <dd>〒515-0041 <br>三重県松阪市上川町2500-15</dd>
+          <dt>TEL</dt>
+          <dd>0598-28-4970</dd>
+        </dl>
+        <div class="text-right">
+          <a href="/contact" class="c-btn c-btn--g">お問い合わせ</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<script>
+  import Splide from '@splidejs/splide';
+
+  const splide = new Splide('.p-top-fv__slider', {
+    type: 'fade',
+    rewind: true,
+    autoplay: true,
+    interval: 4000,
+    speed: 1500,
+    pauseOnHover: false,
+    arrows: false,
+    pagination: true,
+  });
+
+  splide.on('move', (newIndex: number, prevIndex: number) => {
+    const bgs = document.querySelectorAll<HTMLElement>('.p-top-fv__slide-bg');
+
+    // 前のスライドを現在の transform 値でフリーズ（フェードアウト中のスナップ防止）
+    if (bgs[prevIndex]) {
+      const currentTransform = window.getComputedStyle(bgs[prevIndex]).transform;
+      bgs[prevIndex].classList.remove('is-kenburns');
+      bgs[prevIndex].style.transform = currentTransform;
+    }
+
+    // 次のスライドのアニメーションをリセットして「縮小→拡大」を再生
+    if (bgs[newIndex]) {
+      bgs[newIndex].style.transform = '';
+      bgs[newIndex].classList.remove('is-kenburns');
+      void bgs[newIndex].offsetHeight; // reflow を強制してアニメーションをリセット
+      bgs[newIndex].classList.add('is-kenburns');
+    }
+  });
+
+  splide.mount();
+
+  // 初期表示：最初のスライドのアニメーションを開始
+  const firstBg = document.querySelector<HTMLElement>('.p-top-fv__slide-bg');
+  if (firstBg) firstBg.classList.add('is-kenburns');
+</script>
+
+</BaseLayout>

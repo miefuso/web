@@ -1,0 +1,102 @@
+@use "../foundation/variables" as *;
+@use "../foundation/mixin" as *;
+
+.p-purchase {
+  &-info {
+    width: 41.2%;
+    margin: 64px auto 0;
+
+    @include mq-down-lg {
+      width: 65%;
+    }
+
+    @include mq-down-md {
+      width: 90%;
+    }
+
+    h2,
+    h3 {
+      @include title-font($color-primary, 2.4rem);
+    }
+
+    p {
+      margin-top: 24px;
+    }
+
+    &__list-table {
+      width: 100%;
+      margin-top: 32px;
+      font-size: 1.4rem;
+      border-collapse: collapse;
+
+      th,
+      td {
+        padding: 16px;
+        border: 0;
+        border-bottom: 1px solid $color-text-gray;
+        vertical-align: top;
+      }
+
+      th {
+        text-align: left;
+      }
+
+      td {
+        text-align: left;
+      }
+
+      tr:first-child {
+        th,
+        td {
+          padding-top: 0;
+        }
+      }
+
+      tr:last-child {
+        th,
+        td {
+          border-bottom: 0;
+        }
+      }
+    }
+
+    ol {
+      margin-top: 32px;
+      font-size: 1.4rem;
+      list-style-position: inside;
+
+      li {
+        margin-bottom: 16px;
+        padding-bottom: 16px;
+        padding-left: 16px;
+        border-bottom: 1px solid $color-text-gray;
+
+        &:last-child {
+          margin-bottom: 0;
+          padding-bottom: 0;
+          border: 0;
+        }
+      }
+
+      + p {
+        margin-top: 32px;
+      }
+    }
+
+    .update-date {
+      display: block;
+      margin-top: 8px;
+      font-size: 1.2rem;
+      text-align: right;
+      color: $color-text-gray;
+    }
+  } // &-info
+
+  &__faq-list {
+    margin-top: 128px;
+
+    dl {
+      margin-top: 64px;
+    }
+  }
+}

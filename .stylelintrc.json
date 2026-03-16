@@ -1,0 +1,209 @@
+{
+  "extends": ["stylelint-config-standard-scss"],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "declaration-no-important": true,
+    "color-hex-length": "short",
+    "selector-max-id": 0,
+    "selector-class-pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*(__[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z0-9]+(-[a-z0-9]+)*)?$",
+    "color-named": null,
+    "order/properties-order": [
+      [
+        {
+          "groupName": "コンテンツ生成",
+          "properties": ["content", "quotes"]
+        },
+        {
+          "groupName": "配置",
+          "properties": ["position", "z-index", "top", "right", "bottom", "left"]
+        },
+        {
+          "groupName": "ボックスの種類",
+          "properties": [
+            "display",
+            "visibility",
+            "float",
+            "clear",
+            "overflow",
+            "overflow-x",
+            "overflow-y",
+            "clip",
+            "resize"
+          ]
+        },
+        {
+          "groupName": "フレックス",
+          "properties": [
+            "flex",
+            "flex-direction",
+            "flex-wrap",
+            "flex-flow",
+            "justify-content",
+            "align-items",
+            "align-content",
+            "order",
+            "flex-grow",
+            "flex-shrink",
+            "flex-basis",
+            "align-self"
+          ]
+        },
+        {
+          "groupName": "グリッド",
+          "properties": [
+            "grid",
+            "grid-template",
+            "grid-template-columns",
+            "grid-template-rows",
+            "grid-template-areas",
+            "grid-area",
+            "grid-column",
+            "grid-row",
+            "gap",
+            "column-gap",
+            "row-gap"
+          ]
+        },
+        {
+          "groupName": "ボックスのサイズ",
+          "properties": [
+            "box-sizing",
+            "width",
+            "min-width",
+            "max-width",
+            "height",
+            "min-height",
+            "max-height",
+            "aspect-ratio"
+          ]
+        },
+        {
+          "groupName": "余白",
+          "properties": [
+            "margin",
+            "margin-top",
+            "margin-right",
+            "margin-bottom",
+            "margin-left",
+            "padding",
+            "padding-top",
+            "padding-right",
+            "padding-bottom",
+            "padding-left"
+          ]
+        },
+        {
+          "groupName": "枠線",
+          "properties": [
+            "border",
+            "border-width",
+            "border-style",
+            "border-color",
+            "border-top",
+            "border-top-width",
+            "border-top-style",
+            "border-top-color",
+            "border-right",
+            "border-right-width",
+            "border-right-style",
+            "border-right-color",
+            "border-bottom",
+            "border-bottom-width",
+            "border-bottom-style",
+            "border-bottom-color",
+            "border-left",
+            "border-left-width",
+            "border-left-style",
+            "border-left-color",
+            "border-radius",
+            "outline",
+            "outline-width",
+            "outline-style",
+            "outline-color",
+            "outline-offset"
+          ]
+        },
+        {
+          "groupName": "背景",
+          "properties": [
+            "background",
+            "background-color",
+            "background-image",
+            "background-repeat",
+            "background-position",
+            "background-size",
+            "background-attachment",
+            "background-clip",
+            "background-origin"
+          ]
+        },
+        {
+          "groupName": "テキスト・フォント",
+          "properties": [
+            "font",
+            "font-family",
+            "font-size",
+            "font-weight",
+            "font-style",
+            "font-variant",
+            "line-height",
+            "letter-spacing",
+            "word-spacing",
+            "text-align",
+            "text-decoration",
+            "text-transform",
+            "text-indent",
+            "text-overflow",
+            "white-space",
+            "word-break",
+            "word-wrap",
+            "color"
+          ]
+        },
+        {
+          "groupName": "変形・アニメーション",
+          "properties": [
+            "transform",
+            "transform-origin",
+            "transition",
+            "transition-property",
+            "transition-duration",
+            "transition-timing-function",
+            "transition-delay",
+            "animation",
+            "animation-name",
+            "animation-duration",
+            "animation-timing-function",
+            "animation-delay",
+            "animation-iteration-count",
+            "animation-direction",
+            "animation-fill-mode",
+            "animation-play-state"
+          ]
+        },
+        {
+          "groupName": "その他",
+          "properties": [
+            "opacity",
+            "list-style",
+            "list-style-type",
+            "list-style-position",
+            "list-style-image",
+            "vertical-align",
+            "cursor",
+            "pointer-events",
+            "user-select",
+            "appearance"
+          ]
+        }
+      ],
+      { "unspecified": "bottom" }
+    ]
+  },
+  "ignoreFiles": [
+    "vendor/**/*.scss",
+    "tmp/**/*.scss",
+    "node_modules/**/*.scss",
+    "src/assets/styles/foundation/_reset.scss"
+  ]
+}

@@ -1,0 +1,63 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PageHeader from "@/components/common/PageHeader.astro";
+import TopBtn from "@/components/common/TopBtn.astro";
+import SectionTitle from "@/components/common/SectionTitle.astro";
+---
+
+<BaseLayout title="よくある質問 | 株式会社ミエフソー">
+  <PageHeader
+    title="よくある質問"
+    subtitle="FAQ"
+    bgImage="/assets/images/header_faq.jpg"
+  />
+
+  <SectionTitle title="機械の設置に関してよくあるご質問" subtitle="Installation FAQ" />
+
+  <dl class="faq-list p-faq-list">
+    <dt>製品保証はありますか</dt>
+    <dd>
+      据え付け後の稼働から 1 年保証とさせて頂いております。
+    </dd>
+    <dt>設置機械のアフターメンテナンスはどうなりますか？</dt>
+    <dd>
+      アフターメンテナンスは弊社にて対応させて頂いております。三重県外で弊社での対応が難しい場合は、パートナー企業様に依頼して対応させて頂きます。
+    </dd>
+    <dt>三重県外でも設備の設置は可能ですか？</dt>
+    <dd>
+      可能です。一度、工場の現地を見させて頂き、ご要望に合わせた適切なご提案をさせて頂きます。
+    </dd>
+    <dt>三重フソーで購入していない機械ですが、メンテナンスの対応はしてもらえますか？</dt>
+    <dd>
+      要確認。（質問項目として不要か？）
+    </dd>
+    <dt>再生される機械はどういった整備をされるのでしょうか？</dt>
+    <dd>
+      全パーツの分解を行い、状態の確認をして研磨、塗装を行います。ベアリングやチェーン等は交換、シリンダーはパッキンの交換を実施しエア漏れのチェック、各パーツの状態確認を行い、製品の組み上げを行なっております。詳しくは<a href="/features">特徴</a>ページをご参照ください。
+    </dd>
+  </dl>
+
+  <SectionTitle title="買取に関してよくあるご質問" subtitle="Purchase FAQ" />
+
+  <dl class="faq-list p-faq-list">
+    <dt>古い機械でも買取可能ですか？</dt>
+    <dd>
+      買取可能です。詳細な写真と現状情報を頂ければその情報から判断させて頂きます。
+    </dd>
+    <dt>故障しており動作しない機械ですが買取可能でしょうか？</dt>
+    <dd>
+      買取可能です。詳細な写真と現状情報を頂ければその情報から判断させて頂きます。
+    </dd>
+    <dt>三重県外の機械でも買取可能でしょうか？</dt>
+    <dd>
+      可能です。取り外し、運送に関しては一度ご相談させて頂く流れとなります。
+    </dd>
+    <dt>スクラップ業者と比較した場合、買取金額はどの程度変わりますか？</dt>
+    <dd>
+      機械によって異なりますので明確な基準はご提示できませんが、弊社の今までの買取実績はスクラップ代金よりも高額の金額での買取をさせて頂いております。
+    </dd>
+  </dl>
+
+  <TopBtn href="#" />
+
+</BaseLayout>

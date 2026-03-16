@@ -1,0 +1,169 @@
+@use "../foundation/variables" as *;
+@use "../foundation/mixin" as *;
+
+.p-feat {
+  &-head-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+    margin-top: 64px;
+    list-style: none;
+
+    @include mq-down-lg {
+      gap: 24px;
+    }
+
+    @include mq-down-md {
+      flex-direction: column;
+      gap: 32px;
+      margin-top: 48px;
+    }
+
+    li {
+      @include title-font($color-primary, 2rem);
+
+      width: 230px;
+      line-height: 150%;
+      text-align: center;
+      transform: translateY(-16px);
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+      opacity: 0;
+
+      @include mq-down-lg {
+        width: 180px;
+        font-size: 1.6rem;
+      }
+
+      @include mq-down-md {
+        width: 100%;
+      }
+
+      &.is-animated {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    a {
+      position: relative;
+      display: block;
+      margin-bottom: 18px;
+      text-decoration: none;
+      transition: opacity 0.3s ease;
+
+      @include mq-down-md {
+        width: 300px;
+        margin: 0 auto;
+        padding: 12px 0;
+        border: 1px solid $color-primary;
+        border-radius: 4px;
+        transition:
+          color 0.3s ease,
+          background-color 0.3s ease;
+      }
+
+      @include hover-device {
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+
+      &:active {
+        @include mq-down-md {
+          background-color: $color-primary;
+          opacity: 1;
+        }
+      }
+
+      &:visited {
+        color: $color-primary;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -26px;
+        left: calc(50% - 8px);
+        display: inline-block;
+        width: 17px;
+        height: 18px;
+        background-image: url("/assets/images/arrow_bottom_g.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        @include mq-down-md {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &-technical,
+  &-stock {
+    margin-top: $section-space-pc;
+
+    @include mq-down-md {
+      margin-top: 96px;
+    }
+
+    .single-imgae {
+      margin-top: 64px;
+
+      @include mq-down-md {
+        margin-top: 48px;
+      }
+    }
+
+    &__image {
+      transform: scale(1.05);
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+      opacity: 0;
+
+      &.is-animated {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    &__image img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &-proposal {
+    margin-top: $section-space-pc;
+
+    @include mq-down-md {
+      margin-top: 96px;
+    }
+
+    h3 {
+      margin-top: 96px;
+      font-family: $font-serif-jp;
+      font-weight: $fw-black;
+      line-height: 160%;
+      color: $color-primary;
+
+      @include mq-down-md {
+        margin-top: 48px;
+      }
+
+      + p {
+        margin-top: 32px;
+      }
+    }
+
+    .single-imgae {
+      margin-top: 64px;
+    }
+  }
+}

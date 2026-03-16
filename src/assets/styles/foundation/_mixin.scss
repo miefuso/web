@@ -1,0 +1,67 @@
+@use "variables" as *;
+
+// モバイルファースト（min-widthは「以上」（最小幅））
+@mixin mq-sm {
+  @media (min-width: $bp-sm) {
+    @content;
+  }
+}
+
+@mixin mq-md {
+  @media (min-width: $bp-md) {
+    @content;
+  }
+}
+
+@mixin mq-lg {
+  @media (min-width: $bp-lg) {
+    @content;
+  }
+}
+
+@mixin mq-xl {
+  @media (min-width: $bp-xl) {
+    @content;
+  }
+}
+
+// デスクトップファースト（max-widtは以下（最大値）)
+@mixin mq-doxl-sm {
+  @media (max-width: ($bp-sm - 1px)) {
+    @content;
+  }
+}
+
+@mixin mq-down-md {
+  @media (max-width: ($bp-md - 1px)) {
+    @content;
+  }
+}
+
+@mixin mq-down-lg {
+  @media (max-width: ($bp-lg - 1px)) {
+    @content;
+  }
+}
+
+@mixin mq-down-xl {
+  @media (max-width: ($bp-xl - 1px)) {
+    @content;
+  }
+}
+
+// マウス操作デバイスのみ hover を適用
+@mixin hover-device {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
+
+// 見出し書体
+@mixin title-font($color, $fontSize) {
+  font-family: $font-serif-jp;
+  font-size: $fontSize;
+  font-weight: $fw-black;
+  line-height: 150%;
+  color: $color;
+}

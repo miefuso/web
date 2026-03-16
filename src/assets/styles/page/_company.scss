@@ -1,0 +1,98 @@
+@use "../foundation/variables" as *;
+@use "../foundation/mixin" as *;
+
+.p-company {
+  &-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 64px;
+    margin-top: 64px;
+
+    @include mq-down-lg {
+      grid-template-columns: repeat(1, 1fr);
+      width: 80%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    @include mq-down-md {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    img {
+      height: auto;
+    }
+
+    p {
+      width: 100%;
+      padding-left: 48px;
+
+      @include mq-down-md {
+        padding-left: 0;
+      }
+    }
+
+    h2 {
+      font-family: $font-serif-jp;
+      font-size: 1.8rem;
+      font-weight: $fw-black;
+    }
+
+    &__info-table {
+      width: 100%;
+      margin-top: 32px;
+      font-size: 1.4rem;
+      border-collapse: collapse;
+
+      @include mq-down-md {
+        margin-top: 16px;
+      }
+
+      th,
+      td {
+        padding: 16px 0 16px 16px;
+        border: 0;
+        border-bottom: 1px solid $color-text-gray;
+        vertical-align: top;
+      }
+
+      th {
+        width: 160px;
+        font-weight: normal;
+        text-align: left;
+
+        @include mq-down-md {
+          width: 100px;
+        }
+      }
+
+      td {
+        text-align: left;
+      }
+
+      tr:first-child {
+        th,
+        td {
+          padding-top: 0;
+        }
+      }
+
+      tr:last-child {
+        th,
+        td {
+          border-bottom: 0;
+        }
+      }
+    }
+  } // &-info
+  &-map {
+    width: 100%;
+    height: 400px;
+    margin-top: 64px;
+
+    @include mq-down-md {
+      margin-bottom: -64px;
+    }
+  }
+}

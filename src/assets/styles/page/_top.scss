@@ -1,0 +1,355 @@
+@use "../foundation/variables" as *;
+@use "../foundation/mixin" as *;
+
+@keyframes kenburns {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.08);
+  }
+}
+
+.p-top {
+  // ファーストビュー
+  &-fv {
+    position: relative;
+    width: 100%;
+    height: 500px;
+
+    @include mq-down-md {
+      height: calc(100svh - #{$header-height-pc});
+    }
+
+    &__bg-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      width: 100%;
+      height: 100%;
+    }
+
+    &__bg-left {
+      width: 35%;
+      background-image: url("/assets/images/fv_bg.jpg");
+      background-size: cover;
+
+      @include mq-down-lg {
+        width: 38%;
+      }
+
+      @include mq-down-md {
+        display: none;
+      }
+    }
+
+    &__slider {
+      width: 65%;
+      height: 100%;
+
+      @include mq-down-lg {
+        width: 62%;
+      }
+
+      @include mq-down-md {
+        width: 100%;
+      }
+
+      .splide__track,
+      .splide__list,
+      .splide__slide {
+        height: 100%;
+      }
+
+      /* stylelint-disable selector-class-pattern */
+      .splide__slide {
+        overflow: hidden;
+      }
+      /* stylelint-enable selector-class-pattern */
+
+      .splide__pagination {
+        bottom: 16px; // 位置を調整
+        gap: 8px; // ドット間の余白
+      }
+
+      /* stylelint-disable selector-class-pattern */
+      .splide__pagination__page {
+        background: $color-white;
+        opacity: 0.8;
+      }
+
+      .splide__pagination__page.is-active {
+        background: $color-white;
+        opacity: 1;
+      }
+      /* stylelint-enable selector-class-pattern */
+    }
+
+    &__slide-bg {
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+
+      &.is-kenburns {
+        animation: kenburns 6s ease-in-out forwards;
+      }
+    }
+
+    &__text-area {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 500px;
+
+      @include mq-down-md {
+        align-items: stretch;
+        height: calc(100svh - #{$header-height-pc});
+
+        .container {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 32px 0 42px;
+        }
+      }
+
+      color: $color-white;
+
+      h1 {
+        @include title-font($fw-black, 3.2rem);
+
+        font-weight: $fw-black;
+        line-height: 140%;
+
+        @include mq-down-lg {
+          font-size: 2.8rem;
+        }
+
+        @include mq-down-md {
+          font-size: 3.6rem;
+          text-shadow: 0 2px 6px rgb(0 0 0 / 90%);
+        }
+      }
+
+      p {
+        width: 22%;
+        margin-top: 8px;
+        font-weight: $fw-medium;
+
+        @include mq-down-lg {
+          width: 30%;
+        }
+
+        @include mq-down-md {
+          width: 100%;
+          padding: 12px 14px;
+          background-color: $color-primary-85;
+        }
+      }
+    }
+  }
+
+  // 製材機械の再生販売
+  &-recon {
+    margin-top: $section-space-pc;
+
+    &__body {
+      margin-top: $section-space-pc;
+    }
+
+    &__image {
+      transform: scale(1.05);
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+      opacity: 0;
+
+      &.is-animated {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    &__image img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  // ミエフソーの特徴
+  &-feature {
+    margin-top: $section-space-pc;
+    color: $color-white;
+
+    &__inner {
+      margin-top: $section-space-pc;
+      padding: 64px 0;
+      background-color: $color-primary;
+
+      @include mq-down-md {
+        background: repeating-linear-gradient(
+          -35deg,
+          $color-primary,
+          #024a23 1px,
+          $color-primary 1px,
+          $color-primary 5px
+        );
+      }
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 64px;
+      list-style: none;
+
+      @include mq-down-lg {
+        gap: 48px;
+      }
+
+      h3 {
+        margin-top: 24px;
+        font-family: $font-serif-jp;
+        font-weight: $fw-black;
+
+        @include mq-down-lg {
+          font-size: 1.6rem;
+        }
+      }
+
+      p {
+        margin-top: 4px;
+      }
+
+      .text-right {
+        margin-top: 4px;
+      }
+
+      @include mq-down-md {
+        grid-template-columns: 1fr;
+        gap: 64px;
+
+        h3 {
+          margin-top: 16px;
+        }
+      }
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+
+      .text-right {
+        margin-top: auto;
+        padding-top: 16px;
+      }
+    }
+
+    &__image {
+      background-color: $color-text;
+
+      a {
+        transition: opacity 0.3s ease;
+
+        @include hover-device {
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  // アクセス
+  &-access {
+    margin-top: $section-space-pc;
+
+    @include mq-down-md {
+      overflow-x: clip;
+      margin-top: 64px;
+    }
+
+    &__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      place-items: center;
+
+      @include mq-down-md {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &__map {
+      width: 100%;
+
+      iframe {
+        display: block;
+        width: 100%;
+      }
+
+      @include mq-down-md {
+        width: 100vw;
+        margin-right: calc(50% - 50vw);
+        margin-bottom: -64px;
+        margin-left: calc(50% - 50vw);
+      }
+    }
+
+    &__info {
+      @include mq-down-md {
+        order: -1;
+        width: 100%;
+      }
+
+      h2 {
+        font-family: $font-serif-jp;
+        font-size: 2rem;
+        font-weight: $fw-black;
+
+        @include mq-down-md {
+          padding-bottom: 8px;
+          border-bottom: 1px solid $color-text;
+        }
+      }
+    }
+
+    &__detail {
+      display: grid;
+      grid-template-columns: 70px 1fr;
+      margin: 32px 0 16px;
+      font-size: 14px;
+
+      dd {
+        margin-bottom: 16px;
+      }
+
+      @include mq-down-md {
+        margin: 16px 0 0;
+
+        dd {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .text-right {
+      @include mq-down-md {
+        margin-top: 16px;
+        margin-bottom: 64px;
+      }
+    }
+  }
+}

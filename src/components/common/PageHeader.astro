@@ -1,0 +1,19 @@
+---
+interface Props {
+  title: string;
+  subtitle: string;
+  bgImage: string;
+}
+
+const { title, subtitle, bgImage } = Astro.props;
+---
+
+<div class="l-page-header" style={`background-image: url('${bgImage}');`}>
+  <div class="l-page-header__inner">
+    <div class="container">
+      <h1 class="l-page-header__title">{title}</h1>
+      <div class="l-page-header__line"></div>
+      <p class="l-page-header__subtitle">{subtitle}</p>
+    </div>
+  </div>
+</div>

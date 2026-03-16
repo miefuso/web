@@ -1,0 +1,80 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PageHeader from "@/components/common/PageHeader.astro";
+import TopBtn from "@/components/common/TopBtn.astro";
+import { Image } from 'astro:assets';
+import projectsImg01 from '@/assets/images/projects_01.jpg';
+import projectsImg02 from '@/assets/images/projects_02.jpg';
+import projectsImg03 from '@/assets/images/projects_03.jpg';
+import projectsImg04 from '@/assets/images/projects_04.jpg';
+---
+
+<BaseLayout title="導入実績 | 株式会社ミエフソー">
+  <PageHeader
+    title="導入実績"
+    subtitle="Projects"
+    bgImage="/assets/images/header_projects.jpg"
+  />
+
+  <p class="text-center-self">
+    製材工場における導入実績の一部をご紹介します。<br>
+    現場ごとの課題に向き合い、条件を見極めながら、一台一台丁寧に対応しております。導入直後の運用支援からアフターメンテナンスまで対応し、さらに1年間の製品保証も設けておりますので、安心して設備をご導入いただけます。
+  </p>
+
+  <ul class="tile-imgaes container">
+    <li>
+      <Image src={projectsImg01} alt="キングチッパー"/>
+      <span>キングチッパー</span>
+    </li>
+    <li>
+      <Image src={projectsImg02} alt="ツインソー"/>
+      <span>ツインソー</span>
+    </li>
+    <li>
+      <Image src={projectsImg03} alt="多段式スタッカー"/>
+      <span>多段式スタッカー</span>
+    </li>
+    <li>
+      <Image src={projectsImg04} alt="ツインリッパー"/>
+      <span>ツインリッパー</span>
+    </li>
+  </ul>
+
+  <p class="text-center-self">
+    ご紹介している事例は一部ではございますが、長年にわたり数多くの設備導入をお任せいただいております。今後も一つひとつの現場に誠実に向き合ってまいります。
+  </p>
+
+  <table class="list-table">
+    <tr>
+      <th>リングバーカー（エノ）</th>
+      <td>xx 台</td>
+    </tr>
+    <tr>
+      <th>ツインバンドソー（イシダ）</th>
+      <td>xx 台</td>
+    </tr>
+    <tr>
+      <th>サンプルテキストサンプルテキストサンプルテキスト</th>
+      <td>xx 台</td>
+    </tr>
+    <tr>
+      <th>サンプルテキスト</th>
+      <td>xx 台</td>
+    </tr>
+    <tr>
+      <th>サンプルテキスト</th>
+      <td>xx 台</td>
+    </tr>
+    <tr>
+      <th>サンプルテキスト</th>
+      <td>xx 台</td>
+    </tr>
+    <tr>
+      <th>サンプルテキスト</th>
+      <td>xx 台</td>
+    </tr>
+  </table>
+
+  <TopBtn href="#" />
+
+</BaseLayout>

@@ -1,0 +1,208 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PageHeader from "@/components/common/PageHeader.astro";
+import TopBtn from "@/components/common/TopBtn.astro";
+---
+
+<BaseLayout title="お問い合わせ | 株式会社ミエフソー">
+  <PageHeader
+    title="お問い合わせ"
+    subtitle="Contact"
+    bgImage="/assets/images/header_contact.jpg"
+  />
+
+  <p class="text-center-self">
+    製品に関するご相談や、買取に関するお問い合わせはお電話かメールフォームよりお問い合わせください。
+  </p>
+
+  <!-- フォーム処理退避
+  <section class="p-contact-btn-area">
+    <div class="p-contact-btn-area__tel">
+      <span>お電話</span>
+      <a href="tel:0598-28-4970">0598-28-4970</a>
+    </div>
+    <div class="p-contact-btn-area__form">
+      <a href="#">
+        メールフォーム
+        <span>（Google フォーム）</span>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSevIO9T-qq8xZpeAIMPvgH1Domlb0F3oXNKFqzIuDNR33nFqg/viewform?embedded=true" width="640" height="1465" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+  </section>
+  -->
+
+  <section class="p-contact-form container">
+    <form id="contactForm" class="p-contact-form__form" novalidate>
+      <!-- ハニーポット（ボット対策） -->
+      <div class="p-contact-form__honeypot" aria-hidden="true">
+        <input type="text" name="website" tabindex="-1" autocomplete="off" />
+      </div>
+      <!-- 送信時間チェック用タイムスタンプ -->
+      <input type="hidden" name="loadedAt" id="loadedAt" />
+      <div class="p-contact-form__field">
+        <label for="name">お名前 <span class="p-contact-form__required">必須</span></label>
+        <input type="text" id="name" name="name" required placeholder="山田 太郎" />
+      </div>
+      <div class="p-contact-form__field">
+        <label for="company">会社名</label>
+        <input type="text" id="company" name="company" placeholder="株式会社〇〇" />
+      </div>
+      <div class="p-contact-form__field">
+        <label for="email">メールアドレス <span class="p-contact-form__required">必須</span></label>
+        <input type="email" id="email" name="email" required placeholder="example@email.com" />
+      </div>
+      <div class="p-contact-form__field">
+        <label for="tel">お電話番号 <span class="p-contact-form__required">必須</span></label>
+        <input type="tel" id="tel" name="tel" required placeholder="0598-00-0000" />
+      </div>
+      <div class="p-contact-form__field">
+        <label for="category">お問い合わせ種別 <span class="p-contact-form__required">必須</span></label>
+        <select id="category" name="category" required>
+          <option value="">選択してください</option>
+          <option value="機械の設置、購入に関して">機械の設置、購入に関して</option>
+          <option value="機械の買取に関して">機械の買取に関して</option>
+          <option value="その他">その他</option>
+        </select>
+      </div>
+      <div class="p-contact-form__field">
+        <label for="message">お問い合わせ内容 <span class="p-contact-form__required">必須</span></label>
+        <textarea id="message" name="message" required rows="6" placeholder="お問い合わせ内容をご記入ください"></textarea>
+      </div>
+      <div class="p-contact-form__submit">
+        <button type="submit" class="p-contact-form__btn">送信する</button>
+      </div>
+      <p class="p-contact-form__status" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <section class="p-contact-btn-area">
+    <div class="p-contact-btn-area__tel">
+      <span>お電話でのお問合せは、以下にお願いします</span>
+      <a href="tel:0598-28-4970">0598-28-4970</a>
+    </div>
+  </section>
+
+  <section class="p-company-map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.8798101168422!2d136.56059867604097!3d34.5565983909309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60046a784a75ecf5%3A0x158311d235572a31!2z77yI5qCq77yJ44Of44Ko44OV44K944O8!5e0!3m2!1sja!2sjp!4v1773020097347!5m2!1sja!2sjp" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+    title="株式会社ミエフソー アクセスマップ"></iframe>
+  </section>
+
+  <TopBtn href="#" />
+</BaseLayout>
+
+<script>
+  import { GAS_URL } from '@/config/gas';
+
+  // テスト用初期値（本番時は false に変更）
+  const TEST_MODE = false;
+  if (TEST_MODE) {
+    (document.getElementById('name')     as HTMLInputElement).value  = 'テスト太郎';
+    (document.getElementById('company')  as HTMLInputElement).value  = 'テスト会社';
+    (document.getElementById('email')    as HTMLInputElement).value  = 'tab@koron.jp';
+    (document.getElementById('tel')      as HTMLInputElement).value  = '090-0000-0000';
+    (document.getElementById('category') as HTMLSelectElement).value = 'その他';
+    (document.getElementById('message')  as HTMLTextAreaElement).value =
+      'サンプルテキストサンプルテキスト\nサンプルテキスト\nサンプルテキストサンプルテキストサンプルテキスト\nサンプルテキスト';
+  }
+
+  // ページ読み込み時刻をセット
+  const loadedAtInput = document.getElementById('loadedAt') as HTMLInputElement | null;
+  if (loadedAtInput) loadedAtInput.value = String(Date.now());
+
+  const form = document.getElementById('contactForm') as HTMLFormElement | null;
+  const status = form?.querySelector<HTMLElement>('.p-contact-form__status');
+
+  type ValidatableElement = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
+
+  function validateForm(): boolean {
+    form?.querySelectorAll<HTMLElement>('.p-contact-form__error').forEach(el => el.remove());
+    form?.querySelectorAll<HTMLElement>('.is-error').forEach(el => el.classList.remove('is-error'));
+
+    const fields = [
+      { id: 'name',     label: 'お名前' },
+      { id: 'email',    label: 'メールアドレス' },
+      { id: 'tel',      label: 'お電話番号' },
+      { id: 'category', label: 'お問い合わせ種別' },
+      { id: 'message',  label: 'お問い合わせ内容' },
+    ];
+
+    let isValid = true;
+    fields.forEach(({ id, label }) => {
+      const el = document.getElementById(id) as ValidatableElement | null;
+      if (el && !el.value.trim()) {
+        isValid = false;
+        el.classList.add('is-error');
+        const error = document.createElement('span');
+        error.className = 'p-contact-form__error';
+        error.textContent = `${label}を入力してください`;
+        el.parentElement?.appendChild(error);
+      }
+    });
+
+    // メールアドレス書式チェック
+    const emailEl = document.getElementById('email') as HTMLInputElement | null;
+    if (emailEl && emailEl.value.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailEl.value)) {
+      isValid = false;
+      emailEl.classList.add('is-error');
+      const error = document.createElement('span');
+      error.className = 'p-contact-form__error';
+      error.textContent = 'メールアドレスの形式が正しくありません';
+      emailEl.parentElement?.appendChild(error);
+    }
+
+    return isValid;
+  }
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    if (!validateForm()) {
+      const formSection = document.querySelector<HTMLElement>('.p-contact-form');
+      const header = document.querySelector<HTMLElement>('header');
+      if (formSection) {
+        const isSP = window.matchMedia('(max-width: 767px)').matches;
+        const headerHeight = isSP ? 0 : (header?.offsetHeight ?? 0);
+        const top = formSection.getBoundingClientRect().top + window.scrollY - headerHeight - 32;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+      return;
+    }
+    const btn = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+    if (btn) {
+      btn.disabled = true;
+      btn.textContent = '送信中...';
+    }
+    if (status) {
+      status.textContent = '';
+      status.dataset.state = '';
+    }
+
+    try {
+      await fetch(GAS_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: new URLSearchParams(new FormData(form) as unknown as Record<string, string>),
+      });
+      form.reset();
+      form.classList.add('is-submitted');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (status) {
+        status.innerHTML = 'お問い合わせありがとうございます。<br>後ほど担当より改めてご連絡いたします。';
+        status.dataset.state = 'success';
+      }
+    } catch {
+      if (status) {
+        status.innerHTML = '送信に失敗しました。<br>誠にお手数ですが、お電話にてお問い合わせください。';
+        status.dataset.state = 'error';
+      }
+    } finally {
+      if (btn) {
+        btn.disabled = false;
+        btn.textContent = '送信する';
+      }
+    }
+  });
+</script>
