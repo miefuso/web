@@ -33,7 +33,7 @@
 
     &__bg-left {
       width: 35%;
-      background-image: url("/assets/images/fv_bg.jpg");
+      background-image: url("#{$base-url}/assets/images/fv_bg.jpg");
       background-size: cover;
 
       @include mq-down-lg {

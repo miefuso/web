@@ -34,7 +34,7 @@
     color: $color-white;
 
     &::after {
-      background-image: url("/assets/images/arrow_right_w.svg");
+      background-image: url("#{$base-url}/assets/images/arrow_right_w.svg");
     }
   }
 
@@ -42,7 +42,7 @@
     color: $color-primary;
 
     &::after {
-      background-image: url("/assets/images/arrow_right_g.svg");
+      background-image: url("#{$base-url}/assets/images/arrow_right_g.svg");
     }
   }
 }

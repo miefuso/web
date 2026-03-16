@@ -6,9 +6,11 @@ interface Props {
 }
 
 const { title, subtitle, bgImage } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const resolvedBgImage = bgImage.startsWith('/') ? `${base}${bgImage}` : bgImage;
 ---
 
-<div class="l-page-header" style={`background-image: url('${bgImage}');`}>
+<div class="l-page-header" style={`background-image: url('${resolvedBgImage}');`}>
   <div class="l-page-header__inner">
     <div class="container">
       <h1 class="l-page-header__title">{title}</h1>

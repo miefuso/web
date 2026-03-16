@@ -1,21 +1,22 @@
 ---
 const pathname = Astro.url.pathname;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 const navItems = [
-  { href: '/',          label: 'トップ' },
-  { href: '/features/', label: '特徴' },
-  { href: '/projects/', label: '導入実績' },
-  { href: '/purchase/', label: '買取' },
-  { href: '/company/',  label: '会社概要' },
-  { href: '/faq/',      label: 'よくある質問' },
-  { href: '/contact/',  label: 'お問い合わせ' },
+  { href: `${base}/`,          label: 'トップ' },
+  { href: `${base}/features/`, label: '特徴' },
+  { href: `${base}/projects/`, label: '導入実績' },
+  { href: `${base}/purchase/`, label: '買取' },
+  { href: `${base}/company/`,  label: '会社概要' },
+  { href: `${base}/faq/`,      label: 'よくある質問' },
+  { href: `${base}/contact/`,  label: 'お問い合わせ' },
 ];
 ---
 
 <header class="l-header">
   <div class="l-header__inner container">
     <div class="l-header__logo">
-      <a href="/"><img src="/logo.svg" alt="株式会社ミエフソー" /></a>
+      <a href={`${base}/`}><img src={`${base}/logo.svg`} alt="株式会社ミエフソー" /></a>
     </div>
     <nav class="l-header__nav">
       <ul class="l-header__nav-list">

@@ -3,6 +3,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import PageHeader from "@/components/common/PageHeader.astro";
 import TopBtn from "@/components/common/TopBtn.astro";
 import SectionTitle from "@/components/common/SectionTitle.astro";
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout title="よくある質問 | 株式会社ミエフソー">
@@ -33,7 +34,7 @@ import SectionTitle from "@/components/common/SectionTitle.astro";
     </dd>
     <dt>再生される機械はどういった整備をされるのでしょうか？</dt>
     <dd>
-      全パーツの分解を行い、状態の確認をして研磨、塗装を行います。ベアリングやチェーン等は交換、シリンダーはパッキンの交換を実施しエア漏れのチェック、各パーツの状態確認を行い、製品の組み上げを行なっております。詳しくは<a href="/features">特徴</a>ページをご参照ください。
+      全パーツの分解を行い、状態の確認をして研磨、塗装を行います。ベアリングやチェーン等は交換、シリンダーはパッキンの交換を実施しエア漏れのチェック、各パーツの状態確認を行い、製品の組み上げを行なっております。詳しくは<a href={`${base}/features`}>特徴</a>ページをご参照ください。
     </dd>
   </dl>
 

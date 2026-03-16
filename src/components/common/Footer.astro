@@ -1,13 +1,17 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
 <footer class="l-footer">
   <nav class="l-footer__nav">
     <ul class="l-footer__nav-list">
-        <li><a href="/">トップ</a></li>
-        <li><a href="/features">特徴</a></li>
-        <li><a href="/projects">導入実績</a></li>
-        <li><a href="/purchase">買取</a></li>
-        <li><a href="/company">会社概要</a></li>
-        <li><a href="/faq">よくある質問</a></li>
-        <li><a href="/contact">お問い合わせ</a></li>
+        <li><a href={`${base}/`}>トップ</a></li>
+        <li><a href={`${base}/features`}>特徴</a></li>
+        <li><a href={`${base}/projects`}>導入実績</a></li>
+        <li><a href={`${base}/purchase`}>買取</a></li>
+        <li><a href={`${base}/company`}>会社概要</a></li>
+        <li><a href={`${base}/faq`}>よくある質問</a></li>
+        <li><a href={`${base}/contact`}>お問い合わせ</a></li>
     </ul>
   </nav>
 

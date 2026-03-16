@@ -7,6 +7,7 @@ import reconImg from '@/assets/images/top_recon.jpg';
 import feature01Img from '@/assets/images/top_feature_01.jpg';
 import feature02Img from '@/assets/images/top_feature_02.jpg';
 import feature03Img from '@/assets/images/top_feature_03.jpg';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout title="トップ | 株式会社ミエフソー">
@@ -19,13 +20,13 @@ import feature03Img from '@/assets/images/top_feature_03.jpg';
         <div class="splide__track">
           <ul class="splide__list">
             <li class="splide__slide">
-              <div class="p-top-fv__slide-bg" style="background-image: url('/assets/images/fv_slide_01.jpg');"></div>
+              <div class="p-top-fv__slide-bg" style={`background-image: url('${base}/assets/images/fv_slide_01.jpg');`}></div>
             </li>
             <li class="splide__slide">
-              <div class="p-top-fv__slide-bg" style="background-image: url('/assets/images/fv_slide_02.jpg');"></div>
+              <div class="p-top-fv__slide-bg" style={`background-image: url('${base}/assets/images/fv_slide_02.jpg');`}></div>
             </li>
             <li class="splide__slide">
-              <div class="p-top-fv__slide-bg" style="background-image: url('/assets/images/fv_slide_03.jpg');"></div>
+              <div class="p-top-fv__slide-bg" style={`background-image: url('${base}/assets/images/fv_slide_03.jpg');`}></div>
             </li>
           </ul>
         </div>
@@ -63,7 +64,7 @@ import feature03Img from '@/assets/images/top_feature_03.jpg';
       <ul class="p-top-feature__list container">
         <li class="p-top-feature__item">
           <div class="p-top-feature__image">
-            <a href="/features#technical">
+            <a href={`${base}/features#technical`}>
               <Image src={feature01Img} alt="多くの分野に富んだ技術力" />
             </a>
           </div>
@@ -72,12 +73,12 @@ import feature03Img from '@/assets/images/top_feature_03.jpg';
             数多くの実績の中で培ってきた知識と経験を活かし、一台一台の状態を見極めながら、最適な再生と改良を行っています。
           </p>
           <div class="text-right">
-            <a href="/features#technical" class="c-btn c-btn--w">更に詳しく</a>
+            <a href={`${base}/features#technical`} class="c-btn c-btn--w">更に詳しく</a>
           </div>
         </li>
         <li class="p-top-feature__item">
           <div class="p-top-feature__image">
-            <a href="/features#proposal">
+            <a href={`${base}/features#proposal`}>
               <Image src={feature02Img} alt="様々なニーズへの提案力" />
             </a>
           </div>
@@ -86,12 +87,12 @@ import feature03Img from '@/assets/images/top_feature_03.jpg';
             機械の改造や仕様変更にも柔軟に対応し、豊富な知識と経験をもとに、お客様のご要望に対する最適な解決策をご提案いたします。
           </p>
           <div class="text-right">
-            <a href="/features#proposal" class="c-btn c-btn--w">更に詳しく</a>
+            <a href={`${base}/features#proposal`} class="c-btn c-btn--w">更に詳しく</a>
           </div>
         </li>
         <li class="p-top-feature__item">
           <div class="p-top-feature__image">
-            <a href="/features#stock">
+            <a href={`${base}/features#stock`}>
               <Image src={feature03Img} alt="自社近接地区の作業力" />
             </a>
           </div>
@@ -100,7 +101,7 @@ import feature03Img from '@/assets/images/top_feature_03.jpg';
             自社倉庫に豊富な在庫を保有し、ご要望機種への迅速な対応はもちろん、修理や故障時の部品調達にも柔軟に対応できる体制を整えています。
           </p>
           <div class="text-right">
-            <a href="/features#stock" class="c-btn c-btn--w">更に詳しく</a>
+            <a href={`${base}/features#stock`} class="c-btn c-btn--w">更に詳しく</a>
           </div>
         </li>
       </ul>
@@ -123,7 +124,7 @@ import feature03Img from '@/assets/images/top_feature_03.jpg';
           <dd>0598-28-4970</dd>
         </dl>
         <div class="text-right">
-          <a href="/contact" class="c-btn c-btn--g">お問い合わせ</a>
+          <a href={`${base}/contact`} class="c-btn c-btn--g">お問い合わせ</a>
         </div>
       </div>
     </div>
