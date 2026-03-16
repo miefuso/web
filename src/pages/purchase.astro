@@ -3,6 +3,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import PageHeader from "@/components/common/PageHeader.astro";
 import TopBtn from "@/components/common/TopBtn.astro";
 import SectionTitle from "@/components/common/SectionTitle.astro";
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout title="買取 | 株式会社ミエフソー">
@@ -60,7 +61,7 @@ import SectionTitle from "@/components/common/SectionTitle.astro";
     </ol>
     <span id="updateDate" class="update-date"></span>
     <p>
-      上記記載にはない機械や搬送等も買取させて頂いております。<br>買取に関してご相談がございましたら、<a href=" /contact">お問い合わせページ</a>に記載の連絡先よりお問い合わせください。
+      上記記載にはない機械や搬送等も買取させて頂いております。<br>買取に関してご相談がございましたら、<a href={`${base}/contact`}>お問い合わせページ</a>に記載の連絡先よりお問い合わせください。
     </p>
   </section>
 
