@@ -14,6 +14,7 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
+      - run: echo "export const GAS_URL = '${{ secrets.GAS_URL }}';" > src/config/gas.ts
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
