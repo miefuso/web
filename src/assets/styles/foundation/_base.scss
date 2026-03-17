@@ -1,5 +1,5 @@
 @use "variables" as *;
-@use "../foundation/mixin" as *;
+@use "mixin" as *;
 
 html {
   font-size: 62.5%;
@@ -7,13 +7,13 @@ html {
 
 body {
   font-family: $font-sans-jp;
-  font-size: 1.6rem;
+  font-size: $base-font-size;
   line-height: 1.8;
   color: $color-text;
 }
 
 p {
-  font-size: 1.4rem;
+  font-size: 1.65rem;
   text-align: justify;
 }
 
@@ -54,8 +54,8 @@ main {
 }
 
 .text-center-self {
-  width: 41.2%;
-  margin: 64px auto 0;
+  width: $text-width-pc;
+  margin: 96px auto 0;
 
   @include mq-down-lg {
     width: 65%;
@@ -71,7 +71,7 @@ main {
   padding: 32px 0;
   background-color: $color-primary;
   font-family: $font-serif-jp;
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-weight: $fw-black;
   line-height: 100%;
   text-align: center;
@@ -104,7 +104,7 @@ main {
   span {
     display: block;
     margin-top: 8px;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     line-height: 100%;
   }
 }
@@ -133,9 +133,9 @@ main {
 }
 
 .list-table {
-  width: 41.2%;
+  width: $text-width-pc;
   margin: 64px auto 0;
-  font-size: 1.4rem;
+  font-size: $base-font-size;
   border-collapse: collapse;
 
   @include mq-down-lg {
@@ -179,7 +179,7 @@ main {
 }
 
 .faq-list {
-  width: 41.2%;
+  width: $text-width-pc;
   margin: 0 auto;
 
   @include mq-down-lg {
@@ -191,6 +191,8 @@ main {
   }
 
   dt {
+    @include title-font($fw-black, 1.8rem);
+
     font-family: $font-serif-jp;
     font-weight: $fw-black;
     color: $color-primary;
@@ -200,10 +202,10 @@ main {
     margin-top: 8px;
     padding-top: 8px;
     border-top: 1px solid $color-primary;
-    font-size: 1.4rem;
+    font-size: $base-font-size;
 
     + dt {
-      margin-top: 32px;
+      margin-top: 64px;
     }
   }
 }

@@ -1,8 +1,13 @@
 @use "../foundation/variables" as *;
+@use "../foundation/mixin" as *;
 
 .p-faq {
   &-list {
     margin-top: 48px;
+
+    @include mq-down-md {
+      margin-top: 80px;
+    }
 
     + .c-subtitle {
       margin-top: 128px;
@@ -10,6 +15,6 @@
   }
 }
 
-.c-subtitle {
-  margin-top: 64px;
+.faq-top {
+  margin-top: 96px;
 }

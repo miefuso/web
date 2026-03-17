@@ -2,12 +2,13 @@
 interface Props {
   title: string;
   subtitle: string;
+  subClass?: string;
 }
 
-const { title, subtitle } = Astro.props;
+const { title, subtitle, subClass = '' } = Astro.props;
 ---
 
-<div class="c-subtitle">
+<div class={`c-subtitle${subClass ? ` ${subClass}` : ''}`}>
   <div class="c-subtitle__box">
     <h2>{title}</h2>
     <div class="c-subtitle__border"></div>

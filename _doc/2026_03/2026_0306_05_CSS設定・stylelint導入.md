@@ -36,8 +36,12 @@ $fw-black: 900;
 `html { font-size: 62.5%; }` を設定し `1rem = 10px` として計算できるようにした。
 
 ```scss
-html { font-size: 62.5%; }
-body { font-size: 1.6rem; }  // 16px 相当
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: $base-font-size;
+} // 16px 相当
 ```
 
 ### 3. レスポンシブ対応（ブレイクポイント・mixin）
@@ -54,11 +58,11 @@ body { font-size: 1.6rem; }  // 16px 相当
 
 ### 4. stylelint 導入
 
-| パッケージ | 役割 |
-|---|---|
-| `stylelint` | SCSS の静的解析 |
-| `stylelint-config-standard-scss` | 標準ルールセット |
-| `stylelint-config-recess-order` | CSS プロパティ記述順序の強制 |
+| パッケージ                       | 役割                         |
+| -------------------------------- | ---------------------------- |
+| `stylelint`                      | SCSS の静的解析              |
+| `stylelint-config-standard-scss` | 標準ルールセット             |
+| `stylelint-config-recess-order`  | CSS プロパティ記述順序の強制 |
 
 ```bash
 npm run lint:css  # 実行コマンド
@@ -68,15 +72,15 @@ npm run lint:css  # 実行コマンド
 
 `.scss-lint.yml` のルールを `.stylelintrc.json` に移行。
 
-| 旧ルール（scss-lint） | 新ルール（stylelint） |
-|---|---|
-| `ImportantRule` | `declaration-no-important` |
-| `Indentation: 2` | `indentation: 2` |
-| `HexLength: short` | `color-hex-length: short` |
-| `HexNotation: lowercase` | `color-hex-case: lower` |
-| `IdSelector` | `selector-max-id: 0` |
-| `FinalNewline` | `no-missing-end-of-source-newline` |
-| `NameFormat: hyphenated_lowercase` | `selector-class-pattern` |
+| 旧ルール（scss-lint）              | 新ルール（stylelint）              |
+| ---------------------------------- | ---------------------------------- |
+| `ImportantRule`                    | `declaration-no-important`         |
+| `Indentation: 2`                   | `indentation: 2`                   |
+| `HexLength: short`                 | `color-hex-length: short`          |
+| `HexNotation: lowercase`           | `color-hex-case: lower`            |
+| `IdSelector`                       | `selector-max-id: 0`               |
+| `FinalNewline`                     | `no-missing-end-of-source-newline` |
+| `NameFormat: hyphenated_lowercase` | `selector-class-pattern`           |
 
 ---
 

@@ -1,7 +1,7 @@
 // Colors
 $color-primary: #03632f;
 $color-text: #081319;
-$color-text-gray: #999;
+$color-text-gray: #808080;
 $color-white: #fff;
 $color-white-mb-nav-bg: rgb(255 255 255 / 95%);
 $color-primary-85: rgb(3 99 47 / 85%);
@@ -24,7 +24,9 @@ $fw-black: 900;
 // Layout
 $container-width-pc: 1044px;
 $header-height-pc: 60px;
-$section-space-pc: 128px;
+$section-space-pc: 160px;
+$text-width-pc: 42%;
+$base-font-size: 1.6rem;
 
 // Breakpoints
 $bp-sm: 576px;
@@ -33,4 +35,4 @@ $bp-lg: 1024px;
 $bp-xl: 1280px;
 
 // Base URL (GitHub Pages deploy path)
-$base-url: '/web';
+$base-url: "/web";

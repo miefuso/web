@@ -2,7 +2,7 @@
 @use "../foundation/mixin" as *;
 
 .l-footer {
-  margin-top: 64px;
+  margin-top: 96px;
 
   &__nav {
     @include mq-down-md {
@@ -14,11 +14,11 @@
     display: flex;
     justify-content: center;
     gap: 32px;
-    margin-bottom: 64px;
+    margin-bottom: 96px;
     list-style: none;
 
     a {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       text-decoration: none;
       color: $color-text-gray;
       transition: color 0.3s ease;
