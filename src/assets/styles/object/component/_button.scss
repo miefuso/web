@@ -1,0 +1,48 @@
+@use "../../foundation/variables" as *;
+@use "../../foundation/mixin" as *;
+
+.c-btn {
+  position: relative;
+  display: inline-block;
+  padding-right: 14px;
+  font-family: $font-serif-jp;
+  font-size: $base-font-size;
+  font-weight: $fw-black;
+  line-height: 100%;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+
+  @include hover-device {
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    display: inline-block;
+    width: 14px;
+    height: 10px;
+    margin-left: 4px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &--w {
+    color: $color-white;
+
+    &::after {
+      background-image: url("#{$base-url}/assets/images/arrow_right_w.svg");
+    }
+  }
+
+  &--g {
+    color: $color-primary;
+
+    &::after {
+      background-image: url("#{$base-url}/assets/images/arrow_right_g.svg");
+    }
+  }
+}

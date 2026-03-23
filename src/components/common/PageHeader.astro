@@ -1,0 +1,25 @@
+---
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  title: string;
+  subtitle: string;
+  bgImage: string | ImageMetadata;
+}
+
+const { title, subtitle, bgImage } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const resolvedBgImage = typeof bgImage === 'string'
+  ? (bgImage.startsWith('/') ? `${base}${bgImage}` : bgImage)
+  : bgImage.src;
+---
+
+<div class="l-page-header" style={`background-image: url('${resolvedBgImage}');`}>
+  <div class="l-page-header__inner">
+    <div class="container">
+      <h1 class="l-page-header__title">{title}</h1>
+      <div class="l-page-header__line"></div>
+      <p class="l-page-header__subtitle">{subtitle}</p>
+    </div>
+  </div>
+</div>

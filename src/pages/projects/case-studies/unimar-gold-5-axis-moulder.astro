@@ -1,0 +1,42 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PageHeader from "@/components/common/PageHeader.astro";
+import TopBtn from "@/components/common/TopBtn.astro";
+import { Image } from 'astro:assets';
+import img01 from '@/assets/images/projects/pro_11_01.jpg';
+import img02 from '@/assets/images/projects/pro_11_02.jpg';
+import img03 from '@/assets/images/projects/pro_11_03.jpg';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<BaseLayout title="5軸モルダーユニマーゴールド（ヴァインニッヒ） | 導入実績 | 株式会社ミエフソー">
+  <PageHeader
+    title="製造実績"
+    subtitle="Manufacturing Track Record"
+    bgImage={img01}
+  />
+
+  <section class="p-case-study container">
+
+    <div class="p-case-study__overview">
+      <h2>5軸モルダーユニマーゴールド（ヴァインニッヒ）</h2>
+      <p class="text-center-self">
+        再生整備を施した5軸モルダーユニマーゴールド（ヴァインニッヒ）です。完全オーバーホールを実施し、各部品の状態を確認・修復することで新製品と同様の品質での納品を実現しました。現場条件に合わせた調整を行い、安定した稼働をご提供しております。
+      </p>
+    </div>
+
+    <ul class="p-case-study__gallery-list">
+      <li><Image src={img01} alt="5軸モルダーユニマーゴールド（ヴァインニッヒ） 1" /></li>
+      <li><Image src={img02} alt="5軸モルダーユニマーゴールド（ヴァインニッヒ） 2" /></li>
+      <li><Image src={img03} alt="5軸モルダーユニマーゴールド（ヴァインニッヒ） 3" /></li>
+    </ul>
+
+    <div class="p-case-study__back">
+      <a href={`${base}/projects#mtr`} class="c-btn c-btn--g">導入実績一覧へ戻る</a>
+    </div>
+
+  </section>
+
+  <TopBtn href="#" />
+
+</BaseLayout>

@@ -1,0 +1,111 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PageHeader from "@/components/common/PageHeader.astro";
+import TopBtn from "@/components/common/TopBtn.astro";
+import { Image } from 'astro:assets';
+import technicalImg01 from '@/assets/images/dummy.jpg';
+import pickupImg01 from '@/assets/images/feat_picup_01.jpg';
+import pickupImg02 from '@/assets/images/feat_picup_02.jpg';
+import proposalImg from '@/assets/images/feat_proposal_01.jpg';
+import warehouseImg01 from '@/assets/images/feat_warehouse_01.jpg';
+import warehouseImg02 from '@/assets/images/feat_warehouse_02.jpg';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<BaseLayout title="トップ | 株式会社ミエフソー">
+  <PageHeader
+    title="特&nbsp;徴"
+    subtitle="Key Features"
+    bgImage="/assets/images/header_features.jpg"
+  />
+
+  <p class="text-center-self">
+    長年にわたり製材現場と向き合い、製材一次加工機械の販売・再生を通じて安定稼働を支えてきました。その歩みの中で磨いてきたのが、確かな技術力、柔軟な提案力、そして迅速に応える在庫力の三つの強みです。
+  </p>
+
+  <ul id="topNav" class="p-feat-head-link">
+    <li><a href="#technical">多くの実績に基づいた<br>技術力</a></li>
+    <li><a href="#proposal">様々なニーズへの<br>提案力</a></li>
+    <li><a href="#stock">自社倉庫保有の<br>在庫力</a></li>
+  </ul>
+
+  <!-- 技術力 -->
+  <section id="technical" class="p-feat-technical">
+    <h2 class="bund-title">多くの実績に基づいた技術力</h2>
+    <p class="text-center-self">
+      多くの導入実績の中で培ってきた技術をもとに、製品は完全分解から再組立まで一貫して対応しています。<br>
+      <br>
+      洗浄を行い、分解後は部品一つひとつを・研磨し、摩耗や劣化の状態をk確認。補修・交換を経て再塗装を施し、精度を確認しながら組み上げています。表面だけではない、本質的な再生を行っています。
+    </p>
+    <ul class="tile-imgaes container">
+      <li>
+        <Image src={technicalImg01} alt="整備前"/>
+        <span>1. 整備前</span>
+      </li>
+      <li>
+        <Image src={technicalImg01} alt="分解・部品磨き"/>
+        <span>2. 分解・部品磨き</span>
+      </li>
+      <li>
+        <Image src={technicalImg01} alt="塗装"/>
+        <span>3. 塗装</span>
+      </li>
+      <li>
+        <Image src={technicalImg01} alt="組み立て"/>
+        <span>4. 組み立て</span>
+      </li>
+    </ul>
+    <p class="text-center-self">
+      こうした工程を徹底することで、導入後も安定した稼働と長期使用を実現し、現場の生産性と品質を支えています。弊社にて再生整備を行いました事例は<a href={`${base}/projects`}>導入実績</a>ページをご参照ください。
+    </p>
+  </section>
+
+  <!-- 提案力 -->
+  <section id="proposal" class="p-feat-proposal">
+    <h2 class="bund-title">様々なニーズへの提案力</h2>
+    <div class="single-imgae container">
+        <Image src={proposalImg} alt="様々なニーズへ対応できるようご提案をさせて頂きます"/>
+        <p>
+          豊富な知識と経験をもとに、設置スペースや既存ライン構成、生産目標など現場ごとの条件を丁寧に把握し、課題を整理します。さらに、仕様変更や改造にも柔軟に対応し、導入後の運用やメンテナンスまで見据えた最適なご提案を行っています。
+        </p>
+    </div>
+    <div class="text-center-self">
+      <h3>他社メーカーの代車を石田の台車に入れ替える場合</h3>
+      <p>
+        弊社ご提案内容の一例として、台車を入れ替え対応を挙げさせて頂きます。<br>
+        <br>
+        通常、メーカーの異なる代車を入れ替える場合は、レール基礎の解体、入れ替え、場合によっては本体の位置調整も必要になることがございます。そういった場合、入れ替えの為に、対象の製材機械を xx 日ほど稼働を止めて頂く必要がございます。<br>
+        <br>
+        弊社にて、他社メーカーの代車を石田の台車に入れ替える場合は、既存のレールをそのまま利用できるよう適切な改造を施し、約 3 日で据付、試運転を実施することが可能です。
+      </p>
+    </div>
+    <ul class="tile-imgaes container">
+      <li class="p-feat-technical__image">
+        <Image src={pickupImg01} alt="他社メーカーの代車を石田の台車に入れ替える場合のポイント"/>
+      </li>
+      <li class="p-feat-technical__image">
+        <Image src={pickupImg02} alt="他社メーカーの代車に合わせて改造・整備を行なった台車"/>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 在庫力 -->
+  <section id="stock" class="p-feat-stock">
+    <h2 class="bund-title">自社倉庫保有の在庫力</h2>
+    <p class="text-center-self">
+      約6,000㎡（1800坪）の敷地に3棟の倉庫を構え、豊富な在庫を保有することで、ご要望への素早い対応を可能にしています。修理やメンテナンス時の部品調達にも柔軟に対応し、導入後も安心してお使いいただける体制を整えています。
+    </p>
+    <ul class="tile-imgaes container">
+      <li>
+        <Image src={warehouseImg01} alt="ミエフソー倉庫外観"/>
+      </li>
+      <li>
+        <Image src={warehouseImg02} alt="ミエフソー倉庫内"/>
+      </li>
+    </ul>
+  </section>
+
+  <TopBtn href="#topNav" />
+
+
+</BaseLayout>

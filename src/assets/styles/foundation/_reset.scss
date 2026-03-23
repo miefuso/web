@@ -1,0 +1,58 @@
+/*
+  Josh W. Comeau's Custom CSS Reset
+  www.joshwcomeau.com
+*/
+
+/* 1. ボックスモデルの修正：余白や境界線が幅を壊さないようにする */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. デフォルトの余白を削除 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. 本文の行間を整え、フォントのレンダリングを滑らかにする */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 4. メディア要素（画像など）がはみ出さないようにし、ブロック要素化する */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 5. フォーム要素が親のフォント設定を無視するのを防ぐ */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 6. 長い単語が画面からはみ出して横スクロールが出るのを防ぐ */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 7. ルート（#rootや#__nextなど）にスタック文脈を作成する（Reactなどのフレームワーク用） */
+#root,
+#__next {
+  isolation: isolate;
+}

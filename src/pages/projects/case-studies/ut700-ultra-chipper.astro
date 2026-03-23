@@ -1,0 +1,54 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PageHeader from "@/components/common/PageHeader.astro";
+import TopBtn from "@/components/common/TopBtn.astro";
+import { Image } from 'astro:assets';
+import img01 from '@/assets/images/projects/pro_02_01.jpg';
+import img02 from '@/assets/images/projects/pro_02_02.jpg';
+import img03 from '@/assets/images/projects/pro_02_03.jpg';
+import img04 from '@/assets/images/projects/pro_02_04.jpg';
+import img05 from '@/assets/images/projects/pro_02_05.jpg';
+import img06 from '@/assets/images/projects/pro_02_06.jpg';
+import img07 from '@/assets/images/projects/pro_02_07.jpg';
+import img08 from '@/assets/images/projects/pro_02_08.jpg';
+import img09 from '@/assets/images/projects/pro_02_09.jpg';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<BaseLayout title="UT700ウルトラチッパー機（シーケイエスチューキ） | 導入実績 | 株式会社ミエフソー">
+  <PageHeader
+    title="製造実績"
+    subtitle="Manufacturing Track Record"
+    bgImage={img01}
+  />
+
+  <section class="p-case-study container">
+
+    <div class="p-case-study__overview">
+      <h2>UT700ウルトラチッパー機（シーケイエスチューキ）</h2>
+      <p class="text-center-self">
+        再生整備を施したUT700ウルトラチッパー機（シーケイエスチューキ）です。完全オーバーホールを実施し、各部品の状態を確認・修復することで新製品と同様の品質での納品を実現しました。現場条件に合わせた調整を行い、安定した稼働をご提供しております。
+      </p>
+    </div>
+
+    <ul class="p-case-study__gallery-list">
+      <li><Image src={img01} alt="UT700ウルトラチッパー機（シーケイエスチューキ） 1" /></li>
+      <li><Image src={img02} alt="UT700ウルトラチッパー機（シーケイエスチューキ） 2" /></li>
+      <li><Image src={img03} alt="UT700ウルトラチッパー機（シーケイエスチューキ） 3" /></li>
+      <li><Image src={img04} alt="UT700ウルトラチッパー機（シーケイエスチューキ） 4" /></li>
+      <li><Image src={img05} alt="UT700ウルトラチッパー機（シーケイエスチューキ） 5" /></li>
+      <li><Image src={img06} alt="UT700ウルトラチッパー機（シーケイエスチューキ） 6" /></li>
+      <li><Image src={img07} alt="UT700ウルトラチッパー機（シーケイエスチューキ） 7" /></li>
+      <li><Image src={img08} alt="UT700ウルトラチッパー機（シーケイエスチューキ） 8" /></li>
+      <li><Image src={img09} alt="UT700ウルトラチッパー機（シーケイエスチューキ） 9" /></li>
+    </ul>
+
+    <div class="p-case-study__back">
+      <a href={`${base}/projects#mtr`} class="c-btn c-btn--g">導入実績一覧へ戻る</a>
+    </div>
+
+  </section>
+
+  <TopBtn href="#" />
+
+</BaseLayout>

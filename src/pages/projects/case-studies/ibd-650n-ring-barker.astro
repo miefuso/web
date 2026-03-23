@@ -1,0 +1,44 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PageHeader from "@/components/common/PageHeader.astro";
+import TopBtn from "@/components/common/TopBtn.astro";
+import { Image } from 'astro:assets';
+import img01 from '@/assets/images/projects/pro_01_01.jpg';
+import img02 from '@/assets/images/projects/pro_01_02.jpg';
+import img03 from '@/assets/images/projects/pro_01_03.jpg';
+import img04 from '@/assets/images/projects/pro_01_04.jpg';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<BaseLayout title="IBD-650N リングバーカー（石田エンジニアリング） | 導入実績 | 株式会社ミエフソー">
+  <PageHeader
+    title="製造実績"
+    subtitle="Manufacturing Track Record"
+    bgImage={img01}
+  />
+
+  <section class="p-case-study container">
+
+    <div class="p-case-study__overview">
+      <h2>IBD-650N リングバーカー（石田エンジニアリング）</h2>
+      <p class="text-center-self">
+        IBD-650Nリングバーカーは、原木の剥皮工程において安定した処理能力を発揮する設備です。再生機として整備・調整を行うことで、現場条件に適した性能を発揮します。
+      </p>
+    </div>
+
+    <ul class="p-case-study__gallery-list">
+      <li><Image src={img01} alt="IBD-650N リングバーカー（石田エンジニアリング） 1" /></li>
+      <li><Image src={img02} alt="IBD-650N リングバーカー（石田エンジニアリング） 2" /></li>
+      <li><Image src={img03} alt="IBD-650N リングバーカー（石田エンジニアリング） 3" /></li>
+      <li><Image src={img04} alt="IBD-650N リングバーカー（石田エンジニアリング） 4" /></li>
+    </ul>
+
+    <div class="p-case-study__back">
+      <a href={`${base}/projects#mtr`} class="c-btn c-btn--g">導入実績一覧へ戻る</a>
+    </div>
+
+  </section>
+
+  <TopBtn href="#" />
+
+</BaseLayout>

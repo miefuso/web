@@ -1,0 +1,42 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PageHeader from "@/components/common/PageHeader.astro";
+import TopBtn from "@/components/common/TopBtn.astro";
+import SectionTitle from "@/components/common/SectionTitle.astro";
+import FaqPurchaseList from "@/components/FaqPurchaseList.astro";
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<BaseLayout title="よくある質問 | 株式会社ミエフソー">
+  <PageHeader
+    title="よくある質問"
+    subtitle="FAQ"
+    bgImage="/assets/images/header_faq.jpg"
+  />
+
+  <SectionTitle title="機械の設置に関してよくあるご質問" subtitle="Installation FAQ" subClass="p-subtitle-faq p-faq-top"/>
+
+  <dl class="faq-list p-faq-list">
+    <dt>製品保証はありますか</dt>
+    <dd>
+      据え付け後の稼働から 1 年保証とさせて頂いております。
+    </dd>
+    <dt>設置機械のアフターメンテナンスはどうなりますか？</dt>
+    <dd>
+      基本的には買い上げディーラー様にご対応頂いております。ディーラー様対応が難しい場合は、弊社にて対応させて頂いております。
+    </dd>
+    <dt>三重県外でも設備の設置は可能ですか？</dt>
+    <dd>
+      可能です。一度、工場の現地を見させて頂き、ご要望に合わせた適切なご提案をさせて頂きます。
+    </dd>
+    <dt>再生される機械はどういった整備をされるのでしょうか？</dt>
+    <dd>
+      全パーツの分解を行い、状態の確認をして研磨、塗装を行います。ベアリングやチェーン等は交換、シリンダーはパッキンの交換を実施しエア漏れのチェック、各パーツの状態確認を行い、製品の組み上げを行なっております。詳しくは<a href={`${base}/features`}>特徴</a>ページをご参照ください。
+    </dd>
+  </dl>
+
+  <FaqPurchaseList>
+
+  <TopBtn href="#" />
+
+</BaseLayout>

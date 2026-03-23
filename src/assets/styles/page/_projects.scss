@@ -1,0 +1,146 @@
+@use "../foundation/variables" as *;
+@use "../foundation/mixin" as *;
+
+.p-projects {
+  &-section-title {
+    margin-top: $section-space-pc;
+
+    @include mq-down-md {
+      margin-top: 96px;
+    }
+
+    + p {
+      margin-top: 64px;
+    }
+  }
+
+  &-mtr-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 64px;
+    margin-top: 64px;
+    list-style: none;
+
+    @include mq-down-lg {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 48px;
+    }
+
+    @include mq-down-md {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .p-vertical {
+      width: 100%;
+      text-align: center;
+
+      img {
+        display: block;
+        width: 173px;
+        height: 230px;
+        margin: 0 auto;
+
+        @include mq-down-md {
+          width: auto;
+          height: auto;
+          max-height: 248px;
+        }
+      }
+    }
+
+    li {
+      a {
+        img {
+          transition: opacity 0.3s ease;
+        }
+
+        @include hover-device {
+          &:hover {
+            img {
+              opacity: 0.7;
+            }
+          }
+        }
+
+        span {
+          display: block;
+          margin-top: 8px;
+          line-height: 150%;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        border: 1px solid $color-primary;
+
+        @include mq-down-md {
+          max-width: 330px;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+.p-case-study {
+  @mixin p-case-study-c-base {
+    width: 90%;
+    max-width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &__overview {
+    margin-top: 96px;
+
+    @include mq-down-md {
+      margin-top: 64px;
+    }
+
+    h2 {
+      @include title-font($color-primary, 2rem);
+      @include p-case-study-c-base;
+
+      margin: 0 auto;
+    }
+
+    p {
+      @include p-case-study-c-base;
+
+      margin-top: 48px;
+    }
+  }
+
+  &__gallery-list {
+    @include p-case-study-c-base;
+
+    max-width: 900px; // override
+    margin-top: 64px;
+    list-style: none;
+
+    li + li {
+      margin-top: 64px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    &-vertical {
+      img {
+        max-width: 675px;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &__back {
+    @include p-case-study-c-base;
+
+    max-width: 900px; // override
+    margin-top: 64px;
+    text-align: right;
+  }
+}

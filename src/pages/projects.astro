@@ -1,0 +1,209 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PageHeader from "@/components/common/PageHeader.astro";
+import TopBtn from "@/components/common/TopBtn.astro";
+import SectionTitle from "@/components/common/SectionTitle.astro";
+import { Image } from 'astro:assets';
+import projectsImg01 from '@/assets/images/projects_01.jpg';
+import projectsImg02 from '@/assets/images/projects_02.jpg';
+import projectsImg03 from '@/assets/images/projects_03.jpg';
+import projectsImg04 from '@/assets/images/projects_04.jpg';
+import pro01 from '@/assets/images/projects/pro_01_01.jpg';
+import pro02 from '@/assets/images/projects/pro_02_01.jpg';
+import pro03 from '@/assets/images/projects/pro_03_01.jpg';
+import pro04 from '@/assets/images/projects/pro_04_01.jpg';
+import pro05 from '@/assets/images/projects/pro_05_01.jpg';
+import pro06 from '@/assets/images/projects/pro_06_01.jpg';
+import pro07 from '@/assets/images/projects/pro_07_01.jpg';
+import pro08 from '@/assets/images/projects/pro_08_01.jpg';
+import pro09 from '@/assets/images/projects/pro_09_01.jpg';
+import pro10 from '@/assets/images/projects/pro_10_01.jpg';
+import pro11 from '@/assets/images/projects/pro_11_01.jpg';
+import pro12 from '@/assets/images/projects/pro_12_01.jpg';
+import pro13 from '@/assets/images/projects/pro_13_01.jpg';
+import pro14 from '@/assets/images/projects/pro_14_01.jpg';
+import pro15 from '@/assets/images/projects/pro_15_01.jpg';
+import pro16 from '@/assets/images/projects/pro_16_01.jpg';
+import pro17 from '@/assets/images/projects/pro_17_01.jpg';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<BaseLayout title="導入実績 | 株式会社ミエフソー">
+  <PageHeader
+    title="導入実績"
+    subtitle="Projects"
+    bgImage="/assets/images/header_projects.jpg"
+  />
+
+  <p class="text-center-self">
+    製材工場における導入実績の一部をご紹介します。<br>
+    現場ごとの課題に向き合い、条件を見極めながら、一台一台丁寧に対応しております。導入直後の運用支援からアフターメンテナンスまで対応し、さらに1年間の製品保証も設けておりますので、安心して設備をご導入いただけます。
+  </p>
+
+  <ul class="tile-imgaes container">
+    <li>
+      <Image src={projectsImg01} alt="キングチッパー"/>
+      <span>キングチッパー</span>
+    </li>
+    <li>
+      <Image src={projectsImg02} alt="ツインソー"/>
+      <span>ツインソー</span>
+    </li>
+    <li>
+      <Image src={projectsImg03} alt="多段式スタッカー"/>
+      <span>多段式スタッカー</span>
+    </li>
+    <li>
+      <Image src={projectsImg04} alt="ツインリッパー"/>
+      <span>ツインリッパー</span>
+    </li>
+  </ul>
+
+  <SectionTitle title="製造実績" subtitle="Manufacturing Track Record" subClass="p-projects-section-title" id="mtr"/>
+
+  <p class="text-center-self">
+    弊社にて再生整備を行い、納品させて頂きました製品事例の一部となります。
+  </p>
+
+  <ul class="p-projects-mtr-list container">
+    <li>
+      <a href={`${base}/projects/case-studies/ibd-650n-ring-barker`}>
+        <Image src={pro01} alt="IBD-650Nリングバーカー（石田エンジニアリング）"/>
+        <span>
+          IBD-650Nリングバーカー（石田エンジニアリング）
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href={`${base}/projects/case-studies/ut700-ultra-chipper`}>
+        <Image src={pro02} alt="UT700ウルトラチッパー機（シーケイエスチューキ）"/>
+        <span>
+          UT700ウルトラチッパー機（シーケイエスチューキ）
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href={`${base}/projects/case-studies/yv-2-auto-table`}>
+        <Image src={pro03} alt="YV-2型オートテーブル（横山鉄工）"/>
+        <span>
+          YV-2型オートテーブル（横山鉄工）
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href={`${base}/projects/case-studies/unimat-23e-6-axis-moulder`}>
+        <Image src={pro04} alt="6軸モルダーユニマート23E（ヴァイニッヒ）"/>
+        <span>
+          6軸モルダーユニマート23E（ヴァイニッヒ）
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href={`${base}/projects/case-studies/pnc40-chipper`}>
+        <Image src={pro05} alt="PNC40チッパー機（富士鋼業）"/>
+        <span>
+          PNC40チッパー機（富士鋼業）
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href={`${base}/projects/case-studies/automatic-stacker-system`}>
+        <Image src={pro06} alt="全自動取り機自動投入スタッカー付（弊社製作品）"/>
+        <span>
+          全自動取り機自動投入スタッカー付（弊社製作品）
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href={`${base}/projects/case-studies/iat1100-horizontal-band-saw`}>
+        <Image src={pro07} alt="IAT1100横バンドソー（石田エンジニアリング）"/>
+        <span>
+          IAT1100横バンドソー（石田エンジニアリング）
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href={`${base}/projects/case-studies/rf55-ring-barker`}>
+        <Image src={pro08} alt="RF55ノーマンリングバーカー（エノ）"/>
+        <span>
+          RF55ノーマンリングバーカー（エノ）
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href={`${base}/projects/case-studies/planer-gang`}>
+        <Image src={pro09} alt="プレナーギャング（太平製作所）"/>
+        <span>
+          プレナーギャング（太平製作所）
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href={`${base}/projects/case-studies/tyv-260-twin-auto-table`}>
+        <Image src={pro10} alt="TYV-260ツインオートテーブル（横山鉄工）"/>
+        <span>
+          TYV-260ツインオートテーブル（横山鉄工）
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href={`${base}/projects/case-studies/unimar-gold-5-axis-moulder`}>
+        <Image src={pro11} alt="5軸モルダーユニマーゴールド（ヴァインニッヒ）"/>
+        <span>
+          5軸モルダーユニマーゴールド（ヴァインニッヒ）
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href={`${base}/projects/case-studies/isd900-auto-log-carriage`}>
+        <Image src={pro12} alt="ISD900全自動送材車（石田エンジニアリング）"/>
+        <span>
+          ISD900全自動送材車（石田エンジニアリング）
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href={`${base}/projects/case-studies/mrs-40-2s-twin-ripper`}>
+        <Image src={pro13} alt="MRS-40-2Sツインリッパー（横山鉄工）"/>
+        <span>
+          MRS-40-2Sツインリッパー（横山鉄工）
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href={`${base}/projects/case-studies/iat1100-air-tension-twin-band-saw`}>
+        <Image src={pro14} alt="IAT1100エアーテンションツインバンドソー（石田エンジニアリング）"/>
+        <span>
+          IAT1100エアーテンションツインバンドソー（石田エンジニアリング）
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href={`${base}/projects/case-studies/5-axis-moulder`}>
+        <Image src={pro15} alt="5軸モルダー（ギリエ）"/>
+        <span>
+          5軸モルダー（ギリエ）
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href={`${base}/projects/case-studies/pg45c-planer-gang-saw`}>
+        <Image src={pro16} alt="PG45Cプレナーギャングソー（キクカワエンタープライズ）"/>
+        <span>
+          PG45Cプレナーギャングソー（キクカワエンタープライズ）
+        </span>
+      </a>
+    </li>
+    <li>
+      <a class="p-vertical" href={`${base}/projects/case-studies/iat1100-band-saw`}>
+        <Image  src={pro17} alt="IAT1100帯鋸盤（石田エンジニアリング）"/>
+        <span>
+          IAT1100帯鋸盤（石田エンジニアリング）
+        </span>
+      </a>
+    </li>
+  </ul>
+
+  <TopBtn href="#" />
+
+</BaseLayout>

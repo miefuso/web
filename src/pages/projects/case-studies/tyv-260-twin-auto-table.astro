@@ -1,0 +1,38 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PageHeader from "@/components/common/PageHeader.astro";
+import TopBtn from "@/components/common/TopBtn.astro";
+import { Image } from 'astro:assets';
+import img01 from '@/assets/images/projects/pro_10_01.jpg';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<BaseLayout title="TYV-260ツインオートテーブル（横山鉄工） | 導入実績 | 株式会社ミエフソー">
+  <PageHeader
+    title="製造実績"
+    subtitle="Manufacturing Track Record"
+    bgImage={img01}
+  />
+
+  <section class="p-case-study container">
+
+    <div class="p-case-study__overview">
+      <h2>TYV-260ツインオートテーブル（横山鉄工）</h2>
+      <p class="text-center-self">
+        再生整備を施したTYV-260ツインオートテーブル（横山鉄工）です。完全オーバーホールを実施し、各部品の状態を確認・修復することで新製品と同様の品質での納品を実現しました。現場条件に合わせた調整を行い、安定した稼働をご提供しております。
+      </p>
+    </div>
+
+    <ul class="p-case-study__gallery-list">
+      <li><Image src={img01} alt="TYV-260ツインオートテーブル（横山鉄工） 1" /></li>
+    </ul>
+
+    <div class="p-case-study__back">
+      <a href={`${base}/projects#mtr`} class="c-btn c-btn--g">導入実績一覧へ戻る</a>
+    </div>
+
+  </section>
+
+  <TopBtn href="#" />
+
+</BaseLayout>

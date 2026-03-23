@@ -1,0 +1,86 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PageHeader from "@/components/common/PageHeader.astro";
+import TopBtn from "@/components/common/TopBtn.astro";
+import FaqPurchaseList from "@/components/FaqPurchaseList.astro";
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<BaseLayout title="買取 | 株式会社ミエフソー">
+  <PageHeader
+    title="買&nbsp;取"
+    subtitle="Purchase"
+    bgImage="/assets/images/header_purchase.jpg"
+  />
+
+  <section class="p-purchase-info">
+    <h2>不要になった製材機械を、<br>適正に評価し次の現場へつなぎます。</h2>
+    <p>
+      不要となった製材一次加工機械の買取を行っております。単体機械からライン一式、工場設備の撤去まで対応可能です。長年にわたり製材現場と向き合ってきた経験をもとに、適正に評価いたします。
+    </p>
+  </section>
+
+  <section class="p-purchase-info">
+    <h3>買取対応可能内容例</h3>
+    <table class="p-purchase-info__list-table">
+      <tr>
+        <th>製材機械</th>
+        <td>
+          リングバーカー<br>
+          ツインソー<br>
+          帯鋸盤<br>
+          搬送設備 など<br>
+          （写真をメール頂けば査定させて頂きます）
+        </td>
+      </tr>
+      <tr>
+        <th>ライン一式買取</th>
+        <td>
+          中〜大規模ライン対応<br>
+          （現地確認後、査定させて頂きます）
+        </td>
+      </tr>
+      <tr>
+        <th>工場設備撤去</th>
+        <td>
+          解体・搬出<br>
+          （遠方の場合は一度ご相談させて頂きます）
+        </td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="p-purchase-info">
+    <h3>現在探している機械</h3>
+    <ol>
+      <li>YV-2型ワンマンオートテーブル</li>
+      <li>横山ツインオートテーブル</li>
+      <li>SW-50-2S ツインリッパー</li>
+      <li>SSW-45-2Sツインリッパー</li>
+      <li>PNC45 チッパー機</li>
+    </ol>
+    <span id="updateDate" class="update-date"></span>
+    <p>
+      上記記載にはない機械や搬送等も買取させて頂いております。<br>買取に関してご相談がございましたら、<a href={`${base}/contact`}>お問い合わせページ</a>に記載の連絡先よりお問い合わせください。
+    </p>
+  </section>
+
+
+  <section class="p-purchase__faq-list">
+    <FaqPurchaseList>
+  </section>
+
+
+  <TopBtn href="#" />
+
+</BaseLayout>
+
+<script>
+  const el = document.getElementById('updateDate');
+  if (el) {
+    const now = new Date();
+    const y = now.getFullYear();
+    const m = now.getMonth() + 1;
+    el.textContent = `（${y}/${m} 更新）`;
+  }
+</script>

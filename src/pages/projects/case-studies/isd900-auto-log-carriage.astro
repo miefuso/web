@@ -1,0 +1,46 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PageHeader from "@/components/common/PageHeader.astro";
+import TopBtn from "@/components/common/TopBtn.astro";
+import { Image } from 'astro:assets';
+import img01 from '@/assets/images/projects/pro_12_01.jpg';
+import img02 from '@/assets/images/projects/pro_12_02.jpg';
+import img03 from '@/assets/images/projects/pro_12_03.jpg';
+import img04 from '@/assets/images/projects/pro_12_04.jpg';
+import img05 from '@/assets/images/projects/pro_12_05.jpg';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<BaseLayout title="ISD900全自動送材車（石田エンジニアリング） | 導入実績 | 株式会社ミエフソー">
+  <PageHeader
+    title="製造実績"
+    subtitle="Manufacturing Track Record"
+    bgImage={img01}
+  />
+
+  <section class="p-case-study container">
+
+    <div class="p-case-study__overview">
+      <h2>ISD900全自動送材車（石田エンジニアリング）</h2>
+      <p class="text-center-self">
+        再生整備を施したISD900全自動送材車（石田エンジニアリング）です。完全オーバーホールを実施し、各部品の状態を確認・修復することで新製品と同様の品質での納品を実現しました。現場条件に合わせた調整を行い、安定した稼働をご提供しております。
+      </p>
+    </div>
+
+    <ul class="p-case-study__gallery-list">
+      <li><Image src={img01} alt="ISD900全自動送材車（石田エンジニアリング） 1" /></li>
+      <li><Image src={img02} alt="ISD900全自動送材車（石田エンジニアリング） 2" /></li>
+      <li><Image src={img03} alt="ISD900全自動送材車（石田エンジニアリング） 3" /></li>
+      <li><Image src={img04} alt="ISD900全自動送材車（石田エンジニアリング） 4" /></li>
+      <li><Image src={img05} alt="ISD900全自動送材車（石田エンジニアリング） 5" /></li>
+    </ul>
+
+    <div class="p-case-study__back">
+      <a href={`${base}/projects#mtr`} class="c-btn c-btn--g">導入実績一覧へ戻る</a>
+    </div>
+
+  </section>
+
+  <TopBtn href="#" />
+
+</BaseLayout>
