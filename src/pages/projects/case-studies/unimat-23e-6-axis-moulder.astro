@@ -2,10 +2,10 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import PageHeader from "@/components/common/PageHeader.astro";
 import TopBtn from "@/components/common/TopBtn.astro";
+import CaseStudyFooter from '@/components/CaseStudyFooter.astro';
 import { Image } from 'astro:assets';
 import img01 from '@/assets/images/projects/pro_04_01.jpg';
 import img02 from '@/assets/images/projects/pro_04_02.jpg';
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout title="6軸モルダーユニマート23E（ヴァイニッヒ） | 導入実績 | 株式会社ミエフソー">
@@ -29,9 +29,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <li><Image src={img02} alt="6軸モルダーユニマート23E（ヴァイニッヒ） 2" /></li>
     </ul>
 
-    <div class="p-case-study__back">
-      <a href={`${base}/projects#mtr`} class="c-btn c-btn--g">導入実績一覧へ戻る</a>
-    </div>
+    <CaseStudyFooter />
 
   </section>
 

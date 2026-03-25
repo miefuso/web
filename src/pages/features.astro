@@ -3,7 +3,10 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import PageHeader from "@/components/common/PageHeader.astro";
 import TopBtn from "@/components/common/TopBtn.astro";
 import { Image } from 'astro:assets';
-import technicalImg01 from '@/assets/images/dummy.jpg';
+import technicalImg01 from '@/assets/images/projects/pro_09_03.jpg';
+import technicalImg02 from '@/assets/images/projects/pro_09_04.jpg';
+import technicalImg03 from '@/assets/images/projects/pro_09_05.jpg';
+import technicalImg04 from '@/assets/images/projects/pro_09_01.jpg';
 import pickupImg01 from '@/assets/images/feat_picup_01.jpg';
 import pickupImg02 from '@/assets/images/feat_picup_02.jpg';
 import proposalImg from '@/assets/images/feat_proposal_01.jpg';
@@ -35,24 +38,24 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <p class="text-center-self">
       多くの導入実績の中で培ってきた技術をもとに、製品は完全分解から再組立まで一貫して対応しています。<br>
       <br>
-      洗浄を行い、分解後は部品一つひとつを・研磨し、摩耗や劣化の状態をk確認。補修・交換を経て再塗装を施し、精度を確認しながら組み上げています。表面だけではない、本質的な再生を行っています。
+      洗浄を行い、分解後は部品一つひとつを・研磨し、摩耗や劣化の状態を確認。補修・交換を経て再塗装を施し、精度を確認しながら組み上げています。表面だけではない、本質的な再生を行っています。
     </p>
     <ul class="tile-imgaes container">
       <li>
-        <Image src={technicalImg01} alt="整備前"/>
-        <span>1. 整備前</span>
+        <Image src={technicalImg01} alt="磨き・塗装"/>
+        <span>1. 磨き・塗装</span>
       </li>
       <li>
-        <Image src={technicalImg01} alt="分解・部品磨き"/>
-        <span>2. 分解・部品磨き</span>
+        <Image src={technicalImg02} alt="ベアリング、スプロケット等の交換"/>
+        <span>2. ベアリング、スプロケット等の交換</span>
       </li>
       <li>
-        <Image src={technicalImg01} alt="塗装"/>
-        <span>3. 塗装</span>
+        <Image src={technicalImg03} alt="組立"/>
+        <span>3. 組立</span>
       </li>
       <li>
-        <Image src={technicalImg01} alt="組み立て"/>
-        <span>4. 組み立て</span>
+        <Image src={technicalImg04} alt="調整・仕上げ"/>
+        <span>4. 調整・仕上げ</span>
       </li>
     </ul>
     <p class="text-center-self">

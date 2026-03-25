@@ -2,6 +2,7 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import PageHeader from "@/components/common/PageHeader.astro";
 import TopBtn from "@/components/common/TopBtn.astro";
+import CaseStudyFooter from '@/components/CaseStudyFooter.astro';
 import { Image } from 'astro:assets';
 import img01 from '@/assets/images/projects/pro_08_01.jpg';
 import img02 from '@/assets/images/projects/pro_08_02.jpg';
@@ -10,7 +11,6 @@ import img04 from '@/assets/images/projects/pro_08_04.jpg';
 import img05 from '@/assets/images/projects/pro_08_05.jpg';
 import img06 from '@/assets/images/projects/pro_08_06.jpg';
 import img07 from '@/assets/images/projects/pro_08_07.jpg';
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout title="RF55ノーマンリングバーカー（エノ） | 導入実績 | 株式会社ミエフソー">
@@ -39,9 +39,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <li><Image src={img07} alt="RF55ノーマンリングバーカー（エノ） 7" /></li>
     </ul>
 
-    <div class="p-case-study__back">
-      <a href={`${base}/projects#mtr`} class="c-btn c-btn--g">導入実績一覧へ戻る</a>
-    </div>
+    <CaseStudyFooter />
 
   </section>
 

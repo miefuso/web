@@ -143,4 +143,10 @@
     margin-top: 64px;
     text-align: right;
   }
+
+  &__bottom-text {
+    @include p-case-study-c-base;
+
+    margin-top: 64px;
+  }
 }

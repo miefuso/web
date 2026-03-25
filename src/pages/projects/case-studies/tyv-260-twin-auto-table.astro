@@ -2,9 +2,9 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import PageHeader from "@/components/common/PageHeader.astro";
 import TopBtn from "@/components/common/TopBtn.astro";
+import CaseStudyFooter from '@/components/CaseStudyFooter.astro';
 import { Image } from 'astro:assets';
 import img01 from '@/assets/images/projects/pro_10_01.jpg';
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout title="TYV-260ツインオートテーブル（横山鉄工） | 導入実績 | 株式会社ミエフソー">
@@ -27,9 +27,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <li><Image src={img01} alt="TYV-260ツインオートテーブル（横山鉄工） 1" /></li>
     </ul>
 
-    <div class="p-case-study__back">
-      <a href={`${base}/projects#mtr`} class="c-btn c-btn--g">導入実績一覧へ戻る</a>
-    </div>
+    <CaseStudyFooter />
 
   </section>
 
