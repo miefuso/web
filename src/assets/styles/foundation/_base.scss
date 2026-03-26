@@ -189,7 +189,7 @@ main {
 .faq-list {
   width: $text-width-pc;
   max-width: $text-max-width-pc;
-  margin: 0 auto;
+  margin: 64px auto 0;
 
   @include mq-down-lg {
     width: 65%;

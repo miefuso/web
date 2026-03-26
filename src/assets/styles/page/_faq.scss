@@ -18,15 +18,3 @@
 .p-faq-top {
   margin-top: 96px;
 }
-
-.p-subtitle-faq {
-  @include mq-down-md {
-    margin-top: 80px;
-
-    h2 {
-      padding-right: 8px;
-      padding-left: 8px;
-      font-size: 2rem;
-    }
-  }
-}
