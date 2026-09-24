@@ -12,10 +12,12 @@ import pickupImg02 from '@/assets/images/feat_picup_02.jpg';
 import proposalImg from '@/assets/images/feat_proposal_01.jpg';
 import warehouseImg01 from '@/assets/images/feat_warehouse_01.jpg';
 import warehouseImg02 from '@/assets/images/feat_warehouse_02.jpg';
+import warehouseImg03 from '@/assets/images/feat_warehouse_03.jpg';
+import warehouseImg04 from '@/assets/images/feat_warehouse_04.jpg';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
-<BaseLayout title="トップ | 株式会社ミエフソー"  description="製材機械の再生・販売におけるミエフソーの強みをご紹介。多くの実績に基づく技術力、現場に合わせた提案力、豊富な在庫力で安定稼働を支えます。">
+<BaseLayout title="特徴 | 株式会社ミエフソー | 製材機械の再生品、中古品の販売"  description="製材機械の再生・販売（再生品・中古品）におけるミエフソーの強みをご紹介。多くの実績に基づく技術力、現場に合わせた提案力、豊富な在庫力で安定稼働を支えます。">
   <PageHeader
     title="特&nbsp;徴"
     subtitle="Key Features"
@@ -103,12 +105,58 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <Image src={warehouseImg01} alt="ミエフソー倉庫外観"/>
       </li>
       <li>
-        <Image src={warehouseImg02} alt="ミエフソー倉庫内"/>
+        <Image src={warehouseImg02} alt="ミエフソー倉庫内1"/>
+      </li>
+      <li>
+        <Image src={warehouseImg03} alt="ミエフソー倉庫内2"/>
+      </li>
+      <li>
+        <Image src={warehouseImg04} alt="ミエフソー倉庫内3"/>
       </li>
     </ul>
   </section>
 
-  <TopBtn href="#topNav" />
+  <section id="stockList" class="p-purchase-info">
+    <h3>弊社在庫品</h3>
+    <ol>
+      <li>IAT-1100 エアーテンション帯鋸盤 (石田)</li>
+      <li>IAT-1200 エアーテンション帯鋸盤 (石田)</li>
+      <li>IAH-1100 エアーテンション横型バンドソー (石田)</li>
+      <li>ISD-900 全自動送材車 ヘッドブロック 3〜4本立 (石田)</li>
+      <li>ISD-N900 全自動送材車 ヘッドブロック 3〜4本立 (石田)</li>
+      <li>INC-900 センタードック 全自動送材車 ヘッドブロック4本立 (石田)</li>
+      <li>INC-900 センタードック 本自動送材車 ヘッドブロック4本立 (石田)</li>
+      <li>PNC45 チッパー機 ロータリースクリーン (富士)</li>
+      <li>PNC40 チッパー機 (富士)</li>
+      <li>PNC32 チッパー機 (富士)</li>
+      <li>プレナーギャング PG-45C (菊川)</li>
+      <li>プレナーギャング C80-F (太平)</li>
+      <li>トリプルリッププレナー (横山)</li>
+      <li>2面プレナー＆バリアブルギャングリッパー PMRG-6S (横山)</li>
+      <li>ツインリッパー SW-50-2S (横山)</li>
+      <li>RF55 ノーマンリングバーカー (エノ)</li>
+      <li>IBD-500N型 ノーマンリングバーカー 4本アーム (石田)</li>
+      <li>IBD-650N型 ノーマンリングバーカー 4本アーム (石田)</li>
+      <li>IAT-1100 ワンマンツインバンドソー (石田)</li>
+      <li>HM4-E型 全自動耳摺機械 2M・3M・4M (橋本)</li>
+      <li>HM4-D型 全自動耳摺機械 U-I型 電気歩出機 (橋本)</li>
+      <li>660型 チャージャー付 スケアリングソー (富士)</li>
+      <li>キングチッパー 600W (富士)</li>
+      <li>大型チッパー 550 (CKSチューキ)</li>
+      <li>モルダー プロフィーマット23E 5軸 (ヴァイニッヒ)</li>
+      <li>プロフィーマット45 (ヴァイニッヒ)</li>
+      <li>モルダー 5軸 (ギリエ)</li>
+      <li>バーク粉砕機 モーター55kw</li>
+      <li>全自動結束機 (杉本)</li>
+      <li>全自動エジャー (石田)</li>
+      <li>テーブルリフター 2t 数台</li>
+    </ol>
+    <span id="updateDate" class="update-date">2026/9 更新</span>
+    <p>
+      上記記載にはない機械もございます。<br>お求めの機械がございましたら<a href={`${base}/contact`}>お問い合わせページ</a>に記載の連絡先よりお気軽にお問い合わせください。
+    </p>
+  </section>
 
+  <TopBtn href="#topNav" />
 
 </BaseLayout>

@@ -6,7 +6,7 @@ import FaqPurchaseList from "@/components/FaqPurchaseList.astro";
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
-<BaseLayout title="買取 | 株式会社ミエフソー"  description="不要となった製材機械の買取を行っています。単体機械からライン一式、工場設備の撤去まで対応。機械の状態や価値を見極め、適正なご提案をいたします。">
+<BaseLayout title="買取 | 株式会社ミエフソー | 製材機械の再生品、中古品の販売"  description="不要となった製材機械の買取を行っています。単体機械からライン一式、工場設備の撤去まで対応。機械の状態や価値を見極め、適正なご提案をいたします。">
   <PageHeader
     title="買&nbsp;取"
     subtitle="Purchase"
@@ -27,9 +27,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         <th>製材機械</th>
         <td>
           リングバーカー<br>
-          ツインソー<br>
-          帯鋸盤<br>
-          搬送設備 など<br>
+          石田ツインソー<br>
+          横山ツインオートテーブル<br>
           （写真をメール頂けば査定させて頂きます）
         </td>
       </tr>
@@ -55,11 +54,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <ol>
       <li>YV-2型ワンマンオートテーブル</li>
       <li>横山ツインオートテーブル</li>
-      <li>SW-50-2S ツインリッパー</li>
-      <li>SSW-45-2Sツインリッパー</li>
+      <li>SSW-45-2S ツインリッパー</li>
       <li>PNC45 チッパー機</li>
     </ol>
-    <span id="updateDate" class="update-date"></span>
+    <span id="updateDate" class="update-date">2026/9 更新</span>
     <p>
       上記記載にはない機械や搬送等も買取させて頂いております。<br>買取に関してご相談がございましたら、<a href={`${base}/contact`}>お問い合わせページ</a>に記載の連絡先よりお問い合わせください。
     </p>
@@ -74,13 +72,3 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   <TopBtn href="#" />
 
 </BaseLayout>
-
-<script>
-  const el = document.getElementById('updateDate');
-  if (el) {
-    const now = new Date();
-    const y = now.getFullYear();
-    const m = now.getMonth() + 1;
-    el.textContent = `（${y}/${m} 更新）`;
-  }
-</script>

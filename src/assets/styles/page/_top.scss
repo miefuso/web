@@ -98,6 +98,25 @@
       }
     }
 
+    // スライド内の製品名（PC: 右下 / SP: 説明文の下・中央）
+    &__product {
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      padding: 2px 8px;
+      border-radius: 3px;
+      background-color: rgb(0 0 0 / 80%);
+      font-size: 1.4rem;
+      font-weight: $fw-medium;
+      color: $color-white;
+
+      @include mq-down-md {
+        font-size: 1.2rem;
+        text-align: center;
+        inset: auto 5% 38px;
+      }
+    }
+
     &__text-area {
       position: absolute;
       top: 0;
@@ -115,7 +134,7 @@
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          padding: 32px 0 42px;
+          padding: 32px 0 74px;
         }
       }
 
