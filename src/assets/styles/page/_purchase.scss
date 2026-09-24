@@ -68,16 +68,26 @@
     ol {
       margin-top: 32px;
       font-size: $base-font-size;
-      list-style-position: inside;
+      list-style: none;
+      counter-reset: list;
 
       li {
+        position: relative;
         margin-bottom: 16px;
+        margin-left: 0;
         padding-bottom: 16px;
-        padding-left: 16px;
+        padding-left: 3em;
         border-bottom: 1px solid $color-text-gray;
+        counter-increment: list;
 
-        &::marker {
+        // 番号は絶対配置にして、折り返した行を文字の開始位置に揃える
+        &::before {
+          content: counter(list) ".";
+          position: absolute;
+          left: 0;
+          width: 2.5em;
           font-weight: $fw-bold;
+          text-align: right;
         }
 
         &:last-child {
