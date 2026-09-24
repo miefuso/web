@@ -1,0 +1,57 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PageHeader from "@/components/common/PageHeader.astro";
+import TopBtn from "@/components/common/TopBtn.astro";
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<BaseLayout title="在庫一覧 | 株式会社ミエフソー | 製材機械の再生品、中古品の販売" description="ミエフソーの在庫機械の一覧です。製材一次加工機械の再生品・中古品を、自社倉庫に豊富に取り揃えています。お求めの機械がございましたらお気軽にお問い合わせください。">
+  <PageHeader
+    title="在庫一覧"
+    subtitle="Stock"
+    bgImage="/assets/images/header_stock.jpg"
+  />
+
+  <section class="p-purchase-info p-purchase-info--stock">
+    <ol>
+      <li>IAT-1100 エアーテンション帯鋸盤 (石田)</li>
+      <li>IAT-1200 エアーテンション帯鋸盤 (石田)</li>
+      <li>IAH-1100 エアーテンション横型バンドソー (石田)</li>
+      <li>ISD-900 全自動送材車 ヘッドブロック 3〜4本立 (石田)</li>
+      <li>ISD-N900 全自動送材車 ヘッドブロック 3〜4本立 (石田)</li>
+      <li>INC-900 センタードック 全自動送材車 ヘッドブロック4本立 (石田)</li>
+      <li>INC-900 センタードック 本自動送材車 ヘッドブロック4本立 (石田)</li>
+      <li>PNC45 チッパー機 ロータリースクリーン (富士)</li>
+      <li>PNC40 チッパー機 (富士)</li>
+      <li>PNC32 チッパー機 (富士)</li>
+      <li>プレナーギャング PG-45C (菊川)</li>
+      <li>プレナーギャング C80-F (太平)</li>
+      <li>トリプルリッププレナー (横山)</li>
+      <li>2面プレナー＆バリアブルギャングリッパー PMRG-6S (横山)</li>
+      <li>ツインリッパー SW-50-2S (横山)</li>
+      <li>RF55 ノーマンリングバーカー (エノ)</li>
+      <li>IBD-500N型 ノーマンリングバーカー 4本アーム (石田)</li>
+      <li>IBD-650N型 ノーマンリングバーカー 4本アーム (石田)</li>
+      <li>IAT-1100 ワンマンツインバンドソー (石田)</li>
+      <li>HM4-E型 全自動耳摺機械 2M・3M・4M (橋本)</li>
+      <li>HM4-D型 全自動耳摺機械 U-I型 電気歩出機 (橋本)</li>
+      <li>660型 チャージャー付 スケアリングソー (富士)</li>
+      <li>キングチッパー 600W (富士)</li>
+      <li>大型チッパー 550 (CKSチューキ)</li>
+      <li>モルダー プロフィーマット23E 5軸 (ヴァイニッヒ)</li>
+      <li>プロフィーマット45 (ヴァイニッヒ)</li>
+      <li>モルダー 5軸 (ギリエ)</li>
+      <li>バーク粉砕機 モーター55kw</li>
+      <li>全自動結束機 (杉本)</li>
+      <li>全自動エジャー (石田)</li>
+      <li>テーブルリフター 2t 数台</li>
+    </ol>
+    <span class="update-date">2026/9 更新</span>
+    <p>
+      上記記載にはない機械もございます。<br>お求めの機械がございましたら<a href={`${base}/contact`}>お問い合わせページ</a>に記載の連絡先よりお気軽にお問い合わせください。
+    </p>
+  </section>
+
+  <TopBtn href="#" />
+
+</BaseLayout>

@@ -76,6 +76,10 @@
         padding-left: 16px;
         border-bottom: 1px solid $color-text-gray;
 
+        &::marker {
+          font-weight: $fw-bold;
+        }
+
         &:last-child {
           margin-bottom: 0;
           padding-bottom: 0;
@@ -94,6 +98,28 @@
       font-size: 1.2rem;
       text-align: right;
       color: $color-text-gray;
+    }
+
+    // 在庫一覧：PCは2列表示にして縦の長さを抑える
+    &--stock {
+      ol li {
+        margin-bottom: 8px;
+        padding-bottom: 8px;
+      }
+
+      @include mq-lg {
+        width: 90%;
+        max-width: $container-width-pc;
+
+        ol {
+          column-gap: 48px;
+          column-count: 2;
+        }
+
+        ol li {
+          break-inside: avoid;
+        }
+      }
     }
   } // &-info
 
